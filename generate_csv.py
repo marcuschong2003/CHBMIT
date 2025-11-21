@@ -86,7 +86,9 @@ for p in range(len(folder)):
             nonseizurefiles.append(x)
 
     for x in nonseizurefiles:
-        edf = mne.io.read_raw_edf(f".//{folder[p]}//{x}", preload=False)
+        edf = mne.io.read_raw_edf(f".//{folder[p]}//{x}", preload=True)
+        edf.set_eeg_reference()
+        edf.filter(l_freq=0.5, h_freq=40)
         samplecount = int(math.ceil(edf.times[-1]/segment_length))
         for y in range(samplecount):
             if (y+1)*segment_length <= edf.times[-1]:
@@ -95,6 +97,8 @@ for p in range(len(folder)):
 
     for x in range(len(seizurefiles)):
         edf = mne.io.read_raw_edf(f".//{folder[p]}//{seizurefiles[x]}", preload=False)
+        edf.set_eeg_reference()
+        edf.filter(l_freq=0.5, h_freq=40)
         Timings = seizuretuple_dic[seizurefiles[x]]
         samplecount = int(math.ceil(edf.times[-1]/segment_length))
         for y in range(samplecount):
@@ -120,3 +124,4 @@ print(normalarrays.shape)
 
 np.savetxt("Ictal.csv", seizurearrays, delimiter=",")
 np.savetxt("Non-Ictal.csv", normalarrays, delimiter=",")
+
