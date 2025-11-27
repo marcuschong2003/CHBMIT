@@ -72,7 +72,7 @@ model.add(Flatten())
 model.add(Dense(1, activation="sigmoid"))
 
 model.compile(optimizer=Adam(learning_rate=learning_rate), loss='binary_crossentropy', metrics = ['accuracy'])
-ES = EarlyStopping(monitor="val_loss", patience=8, restore_best_weights=True)
+ES = EarlyStopping(monitor="val_accuracy", patience=8, restore_best_weights=True)
 history = model.fit(X_train_3d, Y_train, epochs=20, batch_size=16, validation_split=0.2, callbacks=[ES], verbose=1)
 test_loss, test_accuracy = model.evaluate(X_test_3d, Y_test, verbose=0)
 print(f"Test Loss: {test_loss:.4f}")
