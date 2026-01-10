@@ -1,0 +1,770 @@
+Files in the dataset:
+Ictal_00.csv
+Non-Ictal_00.csv
+Ictal_01.csv
+Non-Ictal_01.csv
+Ictal_02.csv
+Non-Ictal_02.csv
+Ictal_03.csv
+Non-Ictal_03.csv
+Ictal_04.csv
+Non-Ictal_04.csv
+Ictal_05.csv
+Non-Ictal_05.csv
+Ictal_06.csv
+Non-Ictal_06.csv
+Ictal_07.csv
+Non-Ictal_07.csv
+Ictal_08.csv
+Non-Ictal_08.csv
+Ictal_09.csv
+Non-Ictal_09.csv
+Ictal_10.csv
+Non-Ictal_10.csv
+Ictal_11.csv
+Non-Ictal_11.csv
+Ictal_12.csv
+Non-Ictal_12.csv
+Ictal_13.csv
+Non-Ictal_13.csv
+Ictal_14.csv
+Non-Ictal_14.csv
+Ictal_15.csv
+Non-Ictal_15.csv
+Ictal_16.csv
+Non-Ictal_16.csv
+Ictal_17.csv
+Non-Ictal_17.csv
+Ictal_18.csv
+Non-Ictal_18.csv
+Ictal_19.csv
+Non-Ictal_19.csv
+Ictal_20.csv
+Non-Ictal_20.csv
+Ictal_21.csv
+Non-Ictal_21.csv
+Ictal_22.csv
+Non-Ictal_22.csv
+Ictal_23.csv
+Non-Ictal_23.csv
+Time used to read Non-Ictal and Ictal data for patient 4: 10177.143170595169 seconds
+(1338426, 2560)
+(1002, 2560)
+Time used to concat the dataframe:1725.2984189987183 seconds
+Time used to split the data :3673.058181285858
+Time used to oversample: 12712.399786949158 seconds
+The Dimension of X_train_res: (2141478, 2560)
+The Dimension of Y_train_res: (2141478,)
+The Dimension of X_test: (267886, 2560)
+The Dimension of Y_test: (267886,)
+Epoch 1/100
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:6642: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\initializers\initializers.py:120: UserWarning: The initializer GlorotNormal is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-12-22 18:56:54.980394: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 204505088 exceeds 10% of free system memory.
+2025-12-22 18:56:55.160320: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 204505088 exceeds 10% of free system memory.
+     1/107074 [..............................] - ETA: 189:51:33 - loss: 0.6671 - accuracy: 0.37502025-12-22 18:56:55.377422: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 204505088 exceeds 10% of free system memory.
+2025-12-22 18:56:55.516167: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 204505088 exceeds 10% of free system memory.
+     2/107074 [..............................] - ETA: 10:28:07 - loss: 0.6966 - accuracy: 0.3750 2025-12-22 18:56:55.713955: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 204505088 exceeds 10% of free system memory.
+ 37594/107074 [=========>....................] - ETA: 6:32:58 - loss: 0.3946 - accuracy: 0.8168Traceback (most recent call last):
+  File "C:\Users\marcu\Documents\CHB-MIT\attention_independent.py", line 98, in <module>
+    history = model.fit(X_train_3d, Y_train_tf, epochs=100, batch_size=16, \
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\engine\training.py", line 1807, in fit
+    tmp_logs = self.train_function(iterator)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 832, in __call__
+    result = self._call(*args, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 868, in _call
+    return tracing_compilation.call_function(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 139, in call_function
+    return function._call_flat(  # pylint: disable=protected-access
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1323, in _call_flat
+    return self._inference_function.call_preflattened(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 216, in call_preflattened
+    flat_outputs = self.call_flat(*args)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 251, in call_flat
+    outputs = self._bound_context.call_function(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\context.py", line 1486, in call_function
+    outputs = execute.execute(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\tensorflow\python\eager\execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+PS C:\Users\marcu\Documents\CHB-MIT> python attention_independent.py
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-12-22 22:30:18.474672: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+Files in the dataset:
+Ictal_00.csv
+Non-Ictal_00.csv
+Ictal_01.csv
+Non-Ictal_01.csv
+Ictal_02.csv
+Non-Ictal_02.csv
+Ictal_03.csv
+Non-Ictal_03.csv
+Ictal_04.csv
+Non-Ictal_04.csv
+Ictal_05.csv
+Non-Ictal_05.csv
+Ictal_06.csv
+Non-Ictal_06.csv
+Ictal_07.csv
+Non-Ictal_07.csv
+Ictal_08.csv
+Non-Ictal_08.csv
+Ictal_09.csv
+Non-Ictal_09.csv
+Ictal_10.csv
+Non-Ictal_10.csv
+Ictal_11.csv
+Non-Ictal_11.csv
+Ictal_12.csv
+Non-Ictal_12.csv
+Ictal_13.csv
+Non-Ictal_13.csv
+Ictal_14.csv
+Non-Ictal_14.csv
+Ictal_15.csv
+Non-Ictal_15.csv
+Ictal_16.csv
+Non-Ictal_16.csv
+Ictal_17.csv
+Non-Ictal_17.csv
+Ictal_18.csv
+Non-Ictal_18.csv
+Ictal_19.csv
+Non-Ictal_19.csv
+Ictal_20.csv
+Non-Ictal_20.csv
+Ictal_21.csv
+Non-Ictal_21.csv
+Ictal_22.csv
+Non-Ictal_22.csv
+Ictal_23.csv
+Non-Ictal_23.csv
+Time used to read Non-Ictal and Ictal data for patient 1: 1521.6507334709167 seconds
+(333684, 2560)
+(1150, 2560)
+Time used to concat the dataframe:586.1270666122437 seconds
+Time used to split the data :855.3185951709747
+Time used to oversample: 3494.783158302307 seconds
+The Dimension of X_train_res: (533874, 2560)
+The Dimension of Y_train_res: (533874,)
+The Dimension of X_test: (66967, 2560)
+The Dimension of Y_test: (66967,)
+Epoch 1/100
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:6642: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\initializers\initializers.py:120: UserWarning: The initializer GlorotNormal is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+26694/26694 [==============================] - 9893s 370ms/step - loss: 0.3772 - accuracy: 0.8227 - val_loss: 1.3267 - val_accuracy: 0.7022
+Epoch 2/100
+26694/26694 [==============================] - 9900s 371ms/step - loss: 0.2044 - accuracy: 0.9120 - val_loss: 1.9140 - val_accuracy: 0.3930
+Epoch 3/100
+26694/26694 [==============================] - 9903s 371ms/step - loss: 0.1525 - accuracy: 0.9364 - val_loss: 1.8185 - val_accuracy: 0.6667
+Epoch 4/100
+26694/26694 [==============================] - 9936s 372ms/step - loss: 0.1227 - accuracy: 0.9501 - val_loss: 3.8861 - val_accuracy: 0.5838
+2025-12-23 11:37:17.435822: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2025-12-23 11:37:17.731051: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2025-12-23 11:37:17.992528: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2025-12-23 11:37:18.249772: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2025-12-23 11:37:18.520180: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+Test Loss: 0.1264
+Test Accuracy: 0.9364
+Time used to train and infer:40170.45739674568 seconds
+Time used to read Non-Ictal and Ictal data for patient 2: 1107.9089303016663 seconds
+(290720, 2560)
+(460, 2560)
+Time used to concat the dataframe:344.6609778404236 seconds
+Time used to split the data :715.6449041366577
+Time used to oversample: 3064.800553560257 seconds
+The Dimension of X_train_res: (465128, 2560)
+The Dimension of Y_train_res: (465128,)
+The Dimension of X_test: (58236, 2560)
+The Dimension of Y_test: (58236,)
+Epoch 1/100
+23257/23257 [==============================] - 8605s 370ms/step - loss: 0.1388 - accuracy: 0.9440 - val_loss: 1.7938 - val_accuracy: 0.5920
+Epoch 2/100
+23257/23257 [==============================] - 8610s 370ms/step - loss: 0.0724 - accuracy: 0.9728 - val_loss: 2.2206 - val_accuracy: 0.6968
+Epoch 3/100
+23257/23257 [==============================] - 8599s 370ms/step - loss: 0.0527 - accuracy: 0.9808 - val_loss: 2.6867 - val_accuracy: 0.6345
+Epoch 4/100
+23257/23257 [==============================] - 8607s 370ms/step - loss: 0.0427 - accuracy: 0.9846 - val_loss: 3.0040 - val_accuracy: 0.7184
+Test Loss: 0.0209
+Test Accuracy: 0.9922
+Time used to train and infer:34887.73685622215 seconds
+Time used to read Non-Ictal and Ictal data for patient 3: 1910.3451054096222 seconds
+(312754, 2560)
+(1035, 2560)
+Time used to concat the dataframe:516.2297384738922 seconds
+Time used to split the data :684.506783246994
+Time used to oversample: 2827.5570628643036 seconds
+The Dimension of X_train_res: (500402, 2560)
+The Dimension of Y_train_res: (500402,)
+The Dimension of X_test: (62758, 2560)
+The Dimension of Y_test: (62758,)
+Epoch 1/100
+25021/25021 [==============================] - 9281s 371ms/step - loss: 0.1709 - accuracy: 0.9306 - val_loss: 1.4360 - val_accuracy: 0.6857
+Epoch 2/100
+25021/25021 [==============================] - 9258s 370ms/step - loss: 0.1150 - accuracy: 0.9554 - val_loss: 1.4444 - val_accuracy: 0.6332
+Epoch 3/100
+25021/25021 [==============================] - 9240s 369ms/step - loss: 0.0963 - accuracy: 0.9633 - val_loss: 1.9596 - val_accuracy: 0.6432
+Epoch 4/100
+25021/25021 [==============================] - 9310s 372ms/step - loss: 0.0835 - accuracy: 0.9691 - val_loss: 1.2512 - val_accuracy: 0.7325
+Epoch 5/100
+25021/25021 [==============================] - 9356s 374ms/step - loss: 0.0758 - accuracy: 0.9721 - val_loss: 2.5174 - val_accuracy: 0.5618
+Epoch 6/100
+25021/25021 [==============================] - 9344s 373ms/step - loss: 0.0693 - accuracy: 0.9747 - val_loss: 3.3058 - val_accuracy: 0.5720
+Epoch 7/100
+25021/25021 [==============================] - 9344s 373ms/step - loss: 0.0637 - accuracy: 0.9769 - val_loss: 2.1998 - val_accuracy: 0.5757
+Test Loss: 0.0448
+Test Accuracy: 0.9853
+Time used to train and infer:65641.83596634865 seconds
+Time used to read Non-Ictal and Ictal data for patient 4: 7388.378879547119 seconds
+(1338426, 2560)
+(1002, 2560)
+Time used to concat the dataframe:1634.806825876236 seconds
+Time used to split the data :2170.8274393081665
+Time used to oversample: 9459.102927923203 seconds
+The Dimension of X_train_res: (2141478, 2560)
+The Dimension of Y_train_res: (2141478,)
+The Dimension of X_test: (267886, 2560)
+The Dimension of Y_test: (267886,)
+Epoch 1/100
+107074/107074 [==============================] - 39768s 371ms/step - loss: 0.1771 - accuracy: 0.9279 - val_loss: 9.3358 - val_accuracy: 0.3629
+Epoch 2/100
+107074/107074 [==============================] - 39855s 372ms/step - loss: 0.1044 - accuracy: 0.9603 - val_loss: 6.8759 - val_accuracy: 0.2884
+Epoch 3/100
+107074/107074 [==============================] - 39723s 371ms/step - loss: 0.0840 - accuracy: 0.9688 - val_loss: 11.0748 - val_accuracy: 0.2696
+Epoch 4/100
+107074/107074 [==============================] - 39613s 370ms/step - loss: 0.0735 - accuracy: 0.9731 - val_loss: 8.4881 - val_accuracy: 0.2381
+Epoch 5/100
+107074/107074 [==============================] - 39623s 370ms/step - loss: 0.0666 - accuracy: 0.9757 - val_loss: 12.6773 - val_accuracy: 0.2646
+Test Loss: 0.0126
+Test Accuracy: 0.9959
+Time used to train and infer:200728.8738758564 seconds
+Time used to read Non-Ictal and Ictal data for patient 5: 1320.0494303703308 seconds
+(320620, 2560)
+(1426, 2560)
+Time used to concat the dataframe:309.528728723526 seconds
+Time used to split the data :436.68303084373474
+Time used to oversample: 2327.625740289688 seconds
+The Dimension of X_train_res: (512950, 2560)
+The Dimension of Y_train_res: (512950,)
+The Dimension of X_test: (64410, 2560)
+The Dimension of Y_test: (64410,)
+Epoch 1/100
+25648/25648 [==============================] - 9749s 380ms/step - loss: 0.2001 - accuracy: 0.9211 - val_loss: 1.8231 - val_accuracy: 0.6203
+Epoch 2/100
+25648/25648 [==============================] - 9476s 369ms/step - loss: 0.1185 - accuracy: 0.9532 - val_loss: 2.0948 - val_accuracy: 0.6267
+Epoch 3/100
+25648/25648 [==============================] - 9501s 370ms/step - loss: 0.0954 - accuracy: 0.9628 - val_loss: 2.3001 - val_accuracy: 0.6002
+Epoch 4/100
+25648/25648 [==============================] - 9533s 372ms/step - loss: 0.0832 - accuracy: 0.9680 - val_loss: 1.7360 - val_accuracy: 0.6186
+Epoch 5/100
+25648/25648 [==============================] - 9559s 373ms/step - loss: 0.0747 - accuracy: 0.9717 - val_loss: 2.6453 - val_accuracy: 0.5729
+Epoch 6/100
+25648/25648 [==============================] - 9483s 370ms/step - loss: 0.0686 - accuracy: 0.9742 - val_loss: 2.2144 - val_accuracy: 0.5349
+Epoch 7/100
+25648/25648 [==============================] - 9487s 370ms/step - loss: 0.0647 - accuracy: 0.9755 - val_loss: 2.2285 - val_accuracy: 0.6140
+Test Loss: 0.0479
+Test Accuracy: 0.9840
+Time used to train and infer:67303.2941069603 seconds
+Time used to read Non-Ictal and Ictal data for patient 6: 2393.7350866794586 seconds
+(551632, 2560)
+(552, 2560)
+Time used to concat the dataframe:399.42206478118896 seconds
+Time used to split the data :543.2717082500458
+Time used to oversample: 3702.09090256691 seconds
+The Dimension of X_train_res: (882616, 2560)
+The Dimension of Y_train_res: (882616,)
+The Dimension of X_test: (110437, 2560)
+The Dimension of Y_test: (110437,)
+Epoch 1/100
+44131/44131 [==============================] - 16360s 371ms/step - loss: 0.2021 - accuracy: 0.9140 - val_loss: 12.3927 - val_accuracy: 0.2358
+Epoch 2/100
+44131/44131 [==============================] - 16443s 373ms/step - loss: 0.1005 - accuracy: 0.9606 - val_loss: 13.9320 - val_accuracy: 0.2191
+Epoch 3/100
+44131/44131 [==============================] - 16454s 373ms/step - loss: 0.0777 - accuracy: 0.9704 - val_loss: 9.1589 - val_accuracy: 0.2892
+Epoch 4/100
+44131/44131 [==============================] - 16406s 372ms/step - loss: 0.0658 - accuracy: 0.9753 - val_loss: 7.4917 - val_accuracy: 0.2650
+Epoch 5/100
+44131/44131 [==============================] - 16327s 370ms/step - loss: 0.0587 - accuracy: 0.9782 - val_loss: 14.3640 - val_accuracy: 0.2477
+Epoch 6/100
+44131/44131 [==============================] - 16367s 371ms/step - loss: 0.0541 - accuracy: 0.9801 - val_loss: 8.8109 - val_accuracy: 0.2343
+Epoch 7/100
+44131/44131 [==============================] - 16442s 373ms/step - loss: 0.0495 - accuracy: 0.9816 - val_loss: 11.5807 - val_accuracy: 0.2407
+Test Loss: 0.1001
+Test Accuracy: 0.9633
+Time used to train and infer:115696.71285104752 seconds
+Time used to read Non-Ictal and Ictal data for patient 7: 2471.12957906723 seconds
+(553978, 2560)
+(828, 2560)
+Time used to concat the dataframe:356.088232755661 seconds
+Time used to split the data :811.8291707038879
+Time used to oversample: 4460.731672525406 seconds
+The Dimension of X_train_res: (886392, 2560)
+The Dimension of Y_train_res: (886392,)
+The Dimension of X_test: (110962, 2560)
+The Dimension of Y_test: (110962,)
+Epoch 1/100
+44320/44320 [==============================] - 16506s 372ms/step - loss: 0.1098 - accuracy: 0.9582 - val_loss: 3.7035 - val_accuracy: 0.5008
+Epoch 2/100
+44320/44320 [==============================] - 16428s 371ms/step - loss: 0.0490 - accuracy: 0.9829 - val_loss: 1.9059 - val_accuracy: 0.6807
+Epoch 3/100
+44320/44320 [==============================] - 16410s 370ms/step - loss: 0.0371 - accuracy: 0.9872 - val_loss: 3.8729 - val_accuracy: 0.5471
+Epoch 4/100
+44320/44320 [==============================] - 16505s 372ms/step - loss: 0.0318 - accuracy: 0.9891 - val_loss: 6.7698 - val_accuracy: 0.4969
+Epoch 5/100
+44320/44320 [==============================] - 16527s 373ms/step - loss: 0.0278 - accuracy: 0.9906 - val_loss: 16.5112 - val_accuracy: 0.4271
+Test Loss: 0.0348
+Test Accuracy: 0.9872
+Time used to train and infer:83269.91077780724 seconds
+Time used to read Non-Ictal and Ictal data for patient 8: 431.0842921733856 seconds
+(162978, 2560)
+(2231, 2560)
+Time used to concat the dataframe:156.93585991859436 seconds
+Time used to split the data :148.89686846733093
+Time used to oversample: 1213.7644791603088 seconds
+The Dimension of X_train_res: (260746, 2560)
+The Dimension of Y_train_res: (260746,)
+The Dimension of X_test: (33042, 2560)
+The Dimension of Y_test: (33042,)
+Epoch 1/100
+13038/13038 [==============================] - 4821s 370ms/step - loss: 0.3564 - accuracy: 0.8417 - val_loss: 7.4901 - val_accuracy: 0.3339
+Epoch 2/100
+13038/13038 [==============================] - 4798s 368ms/step - loss: 0.2491 - accuracy: 0.8946 - val_loss: 11.4450 - val_accuracy: 0.2792
+Epoch 3/100
+13038/13038 [==============================] - 4790s 367ms/step - loss: 0.2147 - accuracy: 0.9104 - val_loss: 12.2025 - val_accuracy: 0.2453
+Epoch 4/100
+13038/13038 [==============================] - 4807s 369ms/step - loss: 0.1935 - accuracy: 0.9197 - val_loss: 13.1844 - val_accuracy: 0.3300
+Test Loss: 0.0951
+Test Accuracy: 0.9658
+Time used to train and infer:19481.906779766083 seconds
+Time used to read Non-Ictal and Ictal data for patient 9: 2381.4113018512726 seconds
+(584534, 2560)
+(744, 2560)
+Time used to concat the dataframe:298.65878462791443 seconds
+Time used to split the data :504.22375893592834
+Time used to oversample: 4013.473546266556 seconds
+The Dimension of X_train_res: (935258, 2560)
+The Dimension of Y_train_res: (935258,)
+The Dimension of X_test: (117056, 2560)
+The Dimension of Y_test: (117056,)
+Epoch 1/100
+46763/46763 [==============================] - 17263s 369ms/step - loss: 0.0678 - accuracy: 0.9749 - val_loss: 2.4937 - val_accuracy: 0.6302
+Epoch 2/100
+46763/46763 [==============================] - 17309s 370ms/step - loss: 0.0298 - accuracy: 0.9897 - val_loss: 3.4898 - val_accuracy: 0.6130
+Epoch 3/100
+46763/46763 [==============================] - 17376s 372ms/step - loss: 0.0225 - accuracy: 0.9925 - val_loss: 2.9526 - val_accuracy: 0.5309
+Epoch 4/100
+46763/46763 [==============================] - 17430s 373ms/step - loss: 0.0181 - accuracy: 0.9939 - val_loss: 3.3962 - val_accuracy: 0.5686
+Test Loss: 0.0072
+Test Accuracy: 0.9978
+Time used to train and infer:70324.87399196625 seconds
+Time used to read Non-Ictal and Ictal data for patient 10: 1910.4050390720367 seconds
+(412551, 2560)
+(1127, 2560)
+Time used to concat the dataframe:568.0009348392487 seconds
+Time used to split the data :733.2573382854462
+Time used to oversample: 3456.9441318511963 seconds
+The Dimension of X_train_res: (660104, 2560)
+The Dimension of Y_train_res: (660104,)
+The Dimension of X_test: (82736, 2560)
+The Dimension of Y_test: (82736,)
+Epoch 1/100
+33006/33006 [==============================] - 12333s 374ms/step - loss: 0.1712 - accuracy: 0.9301 - val_loss: 6.7655 - val_accuracy: 0.4460
+Epoch 2/100
+33006/33006 [==============================] - 12174s 369ms/step - loss: 0.1065 - accuracy: 0.9575 - val_loss: 8.1878 - val_accuracy: 0.4104
+Epoch 3/100
+33006/33006 [==============================] - 12160s 368ms/step - loss: 0.0860 - accuracy: 0.9665 - val_loss: 4.7403 - val_accuracy: 0.4768
+Epoch 4/100
+33006/33006 [==============================] - 12180s 369ms/step - loss: 0.0747 - accuracy: 0.9710 - val_loss: 6.4257 - val_accuracy: 0.4475
+Epoch 5/100
+33006/33006 [==============================] - 12200s 370ms/step - loss: 0.0672 - accuracy: 0.9742 - val_loss: 5.9512 - val_accuracy: 0.4741
+Epoch 6/100
+33006/33006 [==============================] - 12212s 370ms/step - loss: 0.0626 - accuracy: 0.9761 - val_loss: 5.6081 - val_accuracy: 0.4930
+Test Loss: 0.0177
+Test Accuracy: 0.9961
+Time used to train and infer:73928.08264827728 seconds
+Time used to read Non-Ictal and Ictal data for patient 11: 1320.4172570705414 seconds
+(345629, 2560)
+(2324, 2560)
+Time used to concat the dataframe:327.59893560409546 seconds
+Time used to split the data :601.9646081924438
+Time used to oversample: 2699.23699259758 seconds
+The Dimension of X_train_res: (552918, 2560)
+The Dimension of Y_train_res: (552918,)
+The Dimension of X_test: (69591, 2560)
+The Dimension of Y_test: (69591,)
+Epoch 1/100
+27646/27646 [==============================] - 10304s 373ms/step - loss: 0.2319 - accuracy: 0.9032 - val_loss: 1.4114 - val_accuracy: 0.6389
+Epoch 2/100
+27646/27646 [==============================] - 10202s 369ms/step - loss: 0.1528 - accuracy: 0.9374 - val_loss: 9.5641 - val_accuracy: 0.4065
+Epoch 3/100
+27646/27646 [==============================] - 10191s 369ms/step - loss: 0.1268 - accuracy: 0.9485 - val_loss: 0.8077 - val_accuracy: 0.7628
+Epoch 4/100
+27646/27646 [==============================] - 10196s 369ms/step - loss: 0.1118 - accuracy: 0.9556 - val_loss: 4.4518 - val_accuracy: 0.4797
+Epoch 5/100
+27646/27646 [==============================] - 10202s 369ms/step - loss: 0.1016 - accuracy: 0.9597 - val_loss: 2.4419 - val_accuracy: 0.6098
+Epoch 6/100
+27646/27646 [==============================] - 10194s 369ms/step - loss: 0.0953 - accuracy: 0.9625 - val_loss: 1.0186 - val_accuracy: 0.7386
+Test Loss: 0.0969
+Test Accuracy: 0.9622
+Time used to train and infer:61848.585676431656 seconds
+Time used to read Non-Ictal and Ictal data for patient 12: 636.6916053295135 seconds
+(238044, 2560)
+(5267, 2560)
+Time used to concat the dataframe:228.8880455493927 seconds
+Time used to split the data :378.10856437683105
+Time used to oversample: 1763.2223892211914 seconds
+The Dimension of X_train_res: (380770, 2560)
+The Dimension of Y_train_res: (380770,)
+The Dimension of X_test: (48663, 2560)
+The Dimension of Y_test: (48663,)
+Epoch 1/100
+19039/19039 [==============================] - 7096s 373ms/step - loss: 0.4827 - accuracy: 0.7657 - val_loss: 1.4365 - val_accuracy: 0.3998
+Epoch 2/100
+19039/19039 [==============================] - 7097s 373ms/step - loss: 0.4067 - accuracy: 0.8146 - val_loss: 0.5175 - val_accuracy: 0.7491
+Epoch 3/100
+19039/19039 [==============================] - 7084s 372ms/step - loss: 0.3703 - accuracy: 0.8353 - val_loss: 0.6412 - val_accuracy: 0.6941
+Epoch 4/100
+19039/19039 [==============================] - 7081s 372ms/step - loss: 0.3462 - accuracy: 0.8481 - val_loss: 0.8417 - val_accuracy: 0.6236
+Epoch 5/100
+19039/19039 [==============================] - 7047s 370ms/step - loss: 0.3322 - accuracy: 0.8557 - val_loss: 0.9268 - val_accuracy: 0.6223
+Test Loss: 0.9654
+Test Accuracy: 0.6742
+Time used to train and infer:35798.74939799309 seconds
+Time used to read Non-Ictal and Ictal data for patient 13: 926.9683556556702 seconds
+(283595, 2560)
+(1810, 2560)
+Time used to concat the dataframe:276.9502239227295 seconds
+Time used to split the data :503.4665219783783
+Time used to oversample: 2072.4614782333374 seconds
+The Dimension of X_train_res: (453714, 2560)
+The Dimension of Y_train_res: (453714,)
+The Dimension of X_test: (57081, 2560)
+The Dimension of Y_test: (57081,)
+Epoch 1/100
+22686/22686 [==============================] - 8423s 371ms/step - loss: 0.4304 - accuracy: 0.8009 - val_loss: 3.1282 - val_accuracy: 0.3602
+Epoch 2/100
+22686/22686 [==============================] - 8380s 369ms/step - loss: 0.3488 - accuracy: 0.8426 - val_loss: 3.1275 - val_accuracy: 0.3763
+Epoch 3/100
+22686/22686 [==============================] - 8385s 370ms/step - loss: 0.3123 - accuracy: 0.8609 - val_loss: 6.7482 - val_accuracy: 0.2809
+Epoch 4/100
+22686/22686 [==============================] - 8442s 372ms/step - loss: 0.2884 - accuracy: 0.8718 - val_loss: 3.2460 - val_accuracy: 0.2915
+Epoch 5/100
+22686/22686 [==============================] - 8450s 372ms/step - loss: 0.2728 - accuracy: 0.8800 - val_loss: 2.5967 - val_accuracy: 0.3625
+Epoch 6/100
+22686/22686 [==============================] - 8449s 372ms/step - loss: 0.2611 - accuracy: 0.8855 - val_loss: 6.9999 - val_accuracy: 0.2925
+Epoch 7/100
+22686/22686 [==============================] - 8388s 370ms/step - loss: 0.2504 - accuracy: 0.8913 - val_loss: 4.9904 - val_accuracy: 0.3100
+Epoch 8/100
+22686/22686 [==============================] - 8395s 370ms/step - loss: 0.2421 - accuracy: 0.8946 - val_loss: 7.9999 - val_accuracy: 0.3132
+Test Loss: 0.2335
+Test Accuracy: 0.9043
+Time used to train and infer:67774.74133396149 seconds
+Time used to read Non-Ictal and Ictal data for patient 14: 1168.684653520584 seconds
+(260680, 2560)
+(672, 2560)
+Time used to concat the dataframe:280.87668466567993 seconds
+Time used to split the data :480.6768391132355
+Time used to oversample: 2019.3159818649292 seconds
+The Dimension of X_train_res: (417060, 2560)
+The Dimension of Y_train_res: (417060,)
+The Dimension of X_test: (52271, 2560)
+The Dimension of Y_test: (52271,)
+Epoch 1/100
+20853/20853 [==============================] - 7765s 372ms/step - loss: 0.2557 - accuracy: 0.8975 - val_loss: 1.6762 - val_accuracy: 0.4734
+Epoch 2/100
+20853/20853 [==============================] - 7732s 371ms/step - loss: 0.1370 - accuracy: 0.9459 - val_loss: 0.9281 - val_accuracy: 0.6855
+Epoch 3/100
+20853/20853 [==============================] - 7711s 370ms/step - loss: 0.0996 - accuracy: 0.9616 - val_loss: 2.4555 - val_accuracy: 0.4385
+Epoch 4/100
+20853/20853 [==============================] - 7695s 369ms/step - loss: 0.0821 - accuracy: 0.9686 - val_loss: 0.6358 - val_accuracy: 0.7704
+Epoch 5/100
+20853/20853 [==============================] - 7716s 370ms/step - loss: 0.0701 - accuracy: 0.9734 - val_loss: 1.0523 - val_accuracy: 0.7391
+Epoch 6/100
+20853/20853 [==============================] - 7757s 372ms/step - loss: 0.0630 - accuracy: 0.9765 - val_loss: 1.3433 - val_accuracy: 0.5546
+Epoch 7/100
+20853/20853 [==============================] - 7755s 372ms/step - loss: 0.0568 - accuracy: 0.9788 - val_loss: 0.8124 - val_accuracy: 0.6853
+Test Loss: 0.2872
+Test Accuracy: 0.8988
+Time used to train and infer:54551.41110777855 seconds
+Time used to read Non-Ictal and Ictal data for patient 15: 2287.290709733963 seconds
+(535218, 2560)
+(8132, 2560)
+Time used to concat the dataframe:320.54465341567993 seconds
+Time used to split the data :755.8950912952423
+Time used to oversample: 3975.420865535736 seconds
+The Dimension of X_train_res: (856296, 2560)
+The Dimension of Y_train_res: (856296,)
+The Dimension of X_test: (108670, 2560)
+The Dimension of Y_test: (108670,)
+Epoch 1/100
+42815/42815 [==============================] - 15927s 372ms/step - loss: 0.4674 - accuracy: 0.7830 - val_loss: 0.9332 - val_accuracy: 0.5566
+Epoch 2/100
+42815/42815 [==============================] - 15890s 371ms/step - loss: 0.3981 - accuracy: 0.8218 - val_loss: 0.6750 - val_accuracy: 0.6641
+Epoch 3/100
+42815/42815 [==============================] - 15838s 370ms/step - loss: 0.3664 - accuracy: 0.8379 - val_loss: 1.7830 - val_accuracy: 0.5432
+Epoch 4/100
+42815/42815 [==============================] - 15838s 370ms/step - loss: 0.3456 - accuracy: 0.8480 - val_loss: 2.3870 - val_accuracy: 0.6279
+Epoch 5/100
+42815/42815 [==============================] - 15837s 370ms/step - loss: 0.3321 - accuracy: 0.8543 - val_loss: 5.1441 - val_accuracy: 0.5234
+Test Loss: 1.0722
+Test Accuracy: 0.6396
+Time used to train and infer:80199.58056950569 seconds
+Time used to read Non-Ictal and Ictal data for patient 16: 479.0349016189575 seconds
+(186312, 2560)
+(368, 2560)
+Time used to concat the dataframe:124.099280834198 seconds
+Time used to split the data :214.74978160858154
+Time used to oversample: 1078.6383600234985 seconds
+The Dimension of X_train_res: (298112, 2560)
+The Dimension of Y_train_res: (298112,)
+The Dimension of X_test: (37336, 2560)
+The Dimension of Y_test: (37336,)
+Epoch 1/100
+14906/14906 [==============================] - 5533s 371ms/step - loss: 0.2962 - accuracy: 0.8672 - val_loss: 3.5608 - val_accuracy: 0.3288
+Epoch 2/100
+14906/14906 [==============================] - 5544s 372ms/step - loss: 0.1371 - accuracy: 0.9446 - val_loss: 9.6667 - val_accuracy: 0.3304
+Epoch 3/100
+14906/14906 [==============================] - 5533s 371ms/step - loss: 0.0988 - accuracy: 0.9619 - val_loss: 2.6583 - val_accuracy: 0.3517
+Epoch 4/100
+14906/14906 [==============================] - 5531s 371ms/step - loss: 0.0792 - accuracy: 0.9696 - val_loss: 2.7136 - val_accuracy: 0.3592
+Epoch 5/100
+14906/14906 [==============================] - 5527s 371ms/step - loss: 0.0678 - accuracy: 0.9748 - val_loss: 11.1578 - val_accuracy: 0.3914
+Epoch 6/100
+14906/14906 [==============================] - 5506s 369ms/step - loss: 0.0599 - accuracy: 0.9781 - val_loss: 12.6258 - val_accuracy: 0.1837
+Test Loss: 0.0150
+Test Accuracy: 0.9960
+Time used to train and infer:33474.43389725685 seconds
+Time used to read Non-Ictal and Ictal data for patient 17: 595.742429971695 seconds
+(208126, 2560)
+(896, 2560)
+Time used to concat the dataframe:139.09206318855286 seconds
+Time used to split the data :320.88026094436646
+Time used to oversample: 1484.6673398017883 seconds
+The Dimension of X_train_res: (332990, 2560)
+The Dimension of Y_train_res: (332990,)
+The Dimension of X_test: (41805, 2560)
+The Dimension of Y_test: (41805,)
+Epoch 1/100
+16650/16650 [==============================] - 6207s 373ms/step - loss: 0.3020 - accuracy: 0.8648 - val_loss: 5.2531 - val_accuracy: 0.3812
+Epoch 2/100
+16650/16650 [==============================] - 6137s 369ms/step - loss: 0.1645 - accuracy: 0.9338 - val_loss: 8.3876 - val_accuracy: 0.3744
+Epoch 3/100
+16650/16650 [==============================] - 6139s 369ms/step - loss: 0.1298 - accuracy: 0.9496 - val_loss: 5.5234 - val_accuracy: 0.3550
+Epoch 4/100
+16650/16650 [==============================] - 6146s 369ms/step - loss: 0.1117 - accuracy: 0.9568 - val_loss: 5.9738 - val_accuracy: 0.3757
+Test Loss: 0.0776
+Test Accuracy: 0.9705
+Time used to train and infer:24966.00901246071 seconds
+Time used to read Non-Ictal and Ictal data for patient 18: 1292.115799188614 seconds
+(355002, 2560)
+(1064, 2560)
+Time used to concat the dataframe:301.73185658454895 seconds
+Time used to split the data :482.8795208930969
+Time used to oversample: 2388.358097553253 seconds
+The Dimension of X_train_res: (567994, 2560)
+The Dimension of Y_train_res: (567994,)
+The Dimension of X_test: (71214, 2560)
+The Dimension of Y_test: (71214,)
+Epoch 1/100
+28400/28400 [==============================] - 10528s 371ms/step - loss: 0.2553 - accuracy: 0.8920 - val_loss: 9.3936 - val_accuracy: 0.6152
+Epoch 2/100
+28400/28400 [==============================] - 10491s 369ms/step - loss: 0.1519 - accuracy: 0.9395 - val_loss: 1.5122 - val_accuracy: 0.7427
+Epoch 3/100
+28400/28400 [==============================] - 10505s 370ms/step - loss: 0.1242 - accuracy: 0.9514 - val_loss: 2.7896 - val_accuracy: 0.6570
+Epoch 4/100
+28400/28400 [==============================] - 10493s 369ms/step - loss: 0.1092 - accuracy: 0.9579 - val_loss: 3.2779 - val_accuracy: 0.7044
+Epoch 5/100
+28400/28400 [==============================] - 10562s 372ms/step - loss: 0.0974 - accuracy: 0.9630 - val_loss: 2.3115 - val_accuracy: 0.6572
+Test Loss: 0.1495
+Test Accuracy: 0.9375
+Time used to train and infer:53152.69901418686 seconds
+Time used to read Non-Ictal and Ictal data for patient 19: 1153.223545074463 seconds
+(297978, 2560)
+(756, 2560)
+Time used to concat the dataframe:401.82042717933655 seconds
+Time used to split the data :451.3701615333557
+Time used to oversample: 2168.0184004306793 seconds
+The Dimension of X_train_res: (476746, 2560)
+The Dimension of Y_train_res: (476746,)
+The Dimension of X_test: (59747, 2560)
+The Dimension of Y_test: (59747,)
+Epoch 1/100
+23838/23838 [==============================] - 8811s 370ms/step - loss: 0.1495 - accuracy: 0.9407 - val_loss: 15.5616 - val_accuracy: 0.5488
+Epoch 2/100
+23838/23838 [==============================] - 8799s 369ms/step - loss: 0.0629 - accuracy: 0.9769 - val_loss: 2.4531 - val_accuracy: 0.6681
+Epoch 3/100
+23838/23838 [==============================] - 8848s 371ms/step - loss: 0.0454 - accuracy: 0.9838 - val_loss: 1.9765 - val_accuracy: 0.6657
+Epoch 4/100
+23838/23838 [==============================] - 8903s 373ms/step - loss: 0.0385 - accuracy: 0.9865 - val_loss: 2.4745 - val_accuracy: 0.6160
+Epoch 5/100
+23838/23838 [==============================] - 8906s 374ms/step - loss: 0.0328 - accuracy: 0.9886 - val_loss: 2.0059 - val_accuracy: 0.5904
+Epoch 6/100
+23838/23838 [==============================] - 8925s 374ms/step - loss: 0.0290 - accuracy: 0.9899 - val_loss: 4.1729 - val_accuracy: 0.6518
+Test Loss: 0.0114
+Test Accuracy: 0.9964
+Time used to train and infer:53677.28791427612 seconds
+Time used to read Non-Ictal and Ictal data for patient 20: 988.0376009941101 seconds
+(276472, 2560)
+(1008, 2560)
+Time used to concat the dataframe:337.1637063026428 seconds
+Time used to split the data :570.4819967746735
+Time used to oversample: 2028.4227406978607 seconds
+The Dimension of X_train_res: (442346, 2560)
+The Dimension of Y_train_res: (442346,)
+The Dimension of X_test: (55496, 2560)
+The Dimension of Y_test: (55496,)
+Epoch 1/100
+22118/22118 [==============================] - 8249s 373ms/step - loss: 0.3643 - accuracy: 0.8306 - val_loss: 0.5806 - val_accuracy: 0.7878
+Epoch 2/100
+22118/22118 [==============================] - 8239s 373ms/step - loss: 0.2544 - accuracy: 0.8900 - val_loss: 1.5241 - val_accuracy: 0.7287
+Epoch 3/100
+22118/22118 [==============================] - 8215s 371ms/step - loss: 0.2074 - accuracy: 0.9121 - val_loss: 0.5498 - val_accuracy: 0.8171
+Epoch 4/100
+22118/22118 [==============================] - 8179s 370ms/step - loss: 0.1795 - accuracy: 0.9256 - val_loss: 0.2911 - val_accuracy: 0.8842
+Epoch 5/100
+22118/22118 [==============================] - 8195s 370ms/step - loss: 0.1631 - accuracy: 0.9330 - val_loss: 0.3198 - val_accuracy: 0.8926
+Epoch 6/100
+22118/22118 [==============================] - 8183s 370ms/step - loss: 0.1517 - accuracy: 0.9381 - val_loss: 0.2239 - val_accuracy: 0.9148
+Epoch 7/100
+22118/22118 [==============================] - 8207s 371ms/step - loss: 0.1431 - accuracy: 0.9424 - val_loss: 5.2614 - val_accuracy: 0.6362
+Epoch 8/100
+22118/22118 [==============================] - 8261s 374ms/step - loss: 0.1341 - accuracy: 0.9459 - val_loss: 3.2898 - val_accuracy: 0.7497
+Epoch 9/100
+22118/22118 [==============================] - 8249s 373ms/step - loss: 0.1279 - accuracy: 0.9486 - val_loss: 0.3348 - val_accuracy: 0.8666
+Test Loss: 0.8652
+Test Accuracy: 0.7204
+Time used to train and infer:74425.43557596207 seconds
+Time used to read Non-Ictal and Ictal data for patient 21: 1296.1137130260468 seconds
+(329336, 2560)
+(672, 2560)
+Time used to concat the dataframe:372.73113226890564 seconds
+Time used to split the data :485.23759841918945
+Time used to oversample: 2707.037056684494 seconds
+The Dimension of X_train_res: (526942, 2560)
+The Dimension of Y_train_res: (526942,)
+The Dimension of X_test: (66002, 2560)
+The Dimension of Y_test: (66002,)
+Epoch 1/100
+26348/26348 [==============================] - 9827s 373ms/step - loss: 0.2894 - accuracy: 0.8660 - val_loss: 5.5150 - val_accuracy: 0.2764
+Epoch 2/100
+26348/26348 [==============================] - 9816s 373ms/step - loss: 0.1369 - accuracy: 0.9452 - val_loss: 1.7178 - val_accuracy: 0.4602
+Epoch 3/100
+26348/26348 [==============================] - 9796s 372ms/step - loss: 0.1022 - accuracy: 0.9604 - val_loss: 5.7833 - val_accuracy: 0.3273
+Epoch 4/100
+26348/26348 [==============================] - 9715s 369ms/step - loss: 0.0849 - accuracy: 0.9678 - val_loss: 6.4210 - val_accuracy: 0.2662
+Epoch 5/100
+26348/26348 [==============================] - 9755s 370ms/step - loss: 0.0736 - accuracy: 0.9722 - val_loss: 7.6037 - val_accuracy: 0.2907
+Test Loss: 0.0701
+Test Accuracy: 0.9737
+Time used to train and infer:49442.300238609314 seconds
+Time used to read Non-Ictal and Ictal data for patient 22: 1194.2567772865295 seconds
+(310996, 2560)
+(672, 2560)
+Time used to concat the dataframe:286.95238757133484 seconds
+Time used to split the data :422.751992225647
+Time used to oversample: 2011.7036843299866 seconds
+The Dimension of X_train_res: (497578, 2560)
+The Dimension of Y_train_res: (497578,)
+The Dimension of X_test: (62334, 2560)
+The Dimension of Y_test: (62334,)
+Epoch 1/100
+24879/24879 [==============================] - 9244s 372ms/step - loss: 0.1910 - accuracy: 0.9184 - val_loss: 17.0251 - val_accuracy: 0.3905
+Epoch 2/100
+24879/24879 [==============================] - 9309s 374ms/step - loss: 0.0777 - accuracy: 0.9709 - val_loss: 15.9548 - val_accuracy: 0.3367
+Epoch 3/100
+24879/24879 [==============================] - 9307s 374ms/step - loss: 0.0556 - accuracy: 0.9798 - val_loss: 15.1851 - val_accuracy: 0.3253
+Epoch 4/100
+24879/24879 [==============================] - 9307s 374ms/step - loss: 0.0457 - accuracy: 0.9836 - val_loss: 7.0276 - val_accuracy: 0.3491
+Epoch 5/100
+24879/24879 [==============================] - 9297s 374ms/step - loss: 0.0401 - accuracy: 0.9857 - val_loss: 11.6042 - val_accuracy: 0.3624
+Epoch 6/100
+24879/24879 [==============================] - 9291s 373ms/step - loss: 0.0355 - accuracy: 0.9875 - val_loss: 14.0026 - val_accuracy: 0.3690
+Epoch 7/100
+24879/24879 [==============================] - 9244s 372ms/step - loss: 0.0324 - accuracy: 0.9886 - val_loss: 7.2065 - val_accuracy: 0.3739
+Test Loss: 0.0112
+Test Accuracy: 0.9975
+Time used to train and infer:65500.54582929611 seconds
+Time used to read Non-Ictal and Ictal data for patient 23: 682.7877876758575 seconds
+(218615, 2560)
+(1127, 2560)
+Time used to concat the dataframe:174.56776022911072 seconds
+Time used to split the data :253.00888657569885
+Time used to oversample: 1486.914214849472 seconds
+The Dimension of X_train_res: (349846, 2560)
+The Dimension of Y_train_res: (349846,)
+The Dimension of X_test: (43949, 2560)
+The Dimension of Y_test: (43949,)
+Epoch 1/100
+17493/17493 [==============================] - 6474s 370ms/step - loss: 0.2415 - accuracy: 0.8990 - val_loss: 2.7402 - val_accuracy: 0.5838
+Epoch 2/100
+17493/17493 [==============================] - 6467s 370ms/step - loss: 0.1504 - accuracy: 0.9401 - val_loss: 2.9068 - val_accuracy: 0.6082
+Epoch 3/100
+17493/17493 [==============================] - 6468s 370ms/step - loss: 0.1242 - accuracy: 0.9515 - val_loss: 3.5499 - val_accuracy: 0.5863
+Epoch 4/100
+17493/17493 [==============================] - 6484s 371ms/step - loss: 0.1100 - accuracy: 0.9580 - val_loss: 7.4604 - val_accuracy: 0.5199
+Test Loss: 0.1591
+Test Accuracy: 0.9388
+Time used to train and infer:26249.040107250214 seconds
+Time used to read Non-Ictal and Ictal data for patient 24: 415.21376729011536 seconds
+(174363, 2560)
+(1472, 2560)
+Time used to concat the dataframe:204.82003378868103 seconds
+Time used to split the data :202.22173380851746
+Time used to oversample: 1153.6856908798218 seconds
+The Dimension of X_train_res: (278974, 2560)
+The Dimension of Y_train_res: (278974,)
+The Dimension of X_test: (35167, 2560)
+The Dimension of Y_test: (35167,)
+Epoch 1/100
+13949/13949 [==============================] - 5229s 375ms/step - loss: 0.4085 - accuracy: 0.8166 - val_loss: 1.0823 - val_accuracy: 0.5123
+Epoch 2/100
+13949/13949 [==============================] - 5174s 371ms/step - loss: 0.3236 - accuracy: 0.8601 - val_loss: 0.7659 - val_accuracy: 0.6320
+Epoch 3/100
+13949/13949 [==============================] - 5192s 372ms/step - loss: 0.2799 - accuracy: 0.8821 - val_loss: 0.6447 - val_accuracy: 0.7194
+Epoch 4/100
+13949/13949 [==============================] - 5191s 372ms/step - loss: 0.2541 - accuracy: 0.8938 - val_loss: 0.6635 - val_accuracy: 0.7258
+Epoch 5/100
+13949/13949 [==============================] - 5172s 371ms/step - loss: 0.2376 - accuracy: 0.9013 - val_loss: 0.7186 - val_accuracy: 0.7239
+Epoch 6/100
+13949/13949 [==============================] - 5144s 369ms/step - loss: 0.2231 - accuracy: 0.9080 - val_loss: 0.5522 - val_accuracy: 0.7719
+Epoch 7/100
+13949/13949 [==============================] - 5146s 369ms/step - loss: 0.2124 - accuracy: 0.9133 - val_loss: 0.5594 - val_accuracy: 0.7845
+Epoch 8/100
+13949/13949 [==============================] - 5154s 369ms/step - loss: 0.2033 - accuracy: 0.9172 - val_loss: 0.5853 - val_accuracy: 0.7748
+Epoch 9/100
+13949/13949 [==============================] - 5171s 371ms/step - loss: 0.1954 - accuracy: 0.9204 - val_loss: 0.5621 - val_accuracy: 0.7647
+Test Loss: 0.5084
+Test Accuracy: 0.8090
+Time used to train and infer:46858.56329584122 seconds
