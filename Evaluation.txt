@@ -1,0 +1,537 @@
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-01-11 12:16:56.957978: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:6642: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\initializers\initializers.py:120: UserWarning: The initializer GlorotNormal is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ batch_normalization (Batch  (None, 2560, 1)           4
+ Normalization)
+
+ conv1d (Conv1D)             (None, 2556, 8)           48
+
+ max_pooling1d (MaxPooling1  (None, 1278, 8)           0
+ D)
+
+ re_lu (ReLU)                (None, 1278, 8)           0
+
+ dropout (Dropout)           (None, 1278, 8)           0
+
+ batch_normalization_1 (Bat  (None, 1278, 8)           32
+ chNormalization)
+
+ conv1d_1 (Conv1D)           (None, 1274, 16)          656
+
+ max_pooling1d_1 (MaxPoolin  (None, 637, 16)           0
+ g1D)
+
+ re_lu_1 (ReLU)              (None, 637, 16)           0
+
+ dropout_1 (Dropout)         (None, 637, 16)           0
+
+ batch_normalization_2 (Bat  (None, 637, 16)           64
+ chNormalization)
+
+ conv1d_2 (Conv1D)           (None, 633, 16)           1296
+
+ max_pooling1d_2 (MaxPoolin  (None, 316, 16)           0
+ g1D)
+
+ re_lu_2 (ReLU)              (None, 316, 16)           0
+
+ dropout_2 (Dropout)         (None, 316, 16)           0
+
+ dense (Dense)               (None, 316, 64)           1088
+
+ dense_1 (Dense)             (None, 316, 32)           2080
+
+ flatten (Flatten)           (None, 10112)             0
+
+ dense_2 (Dense)             (None, 1)                 10113
+
+=================================================================
+Total params: 15381 (60.08 KB)
+Trainable params: 15331 (59.89 KB)
+Non-trainable params: 50 (200.00 Byte)
+_________________________________________________________________
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ batch_normalization (Batch  (None, 2560, 1)           4
+ Normalization)
+
+ conv1d (Conv1D)             (None, 2556, 8)           48
+
+ max_pooling1d (MaxPooling1  (None, 1278, 8)           0
+ D)
+
+ re_lu (ReLU)                (None, 1278, 8)           0
+
+ dropout (Dropout)           (None, 1278, 8)           0
+
+ batch_normalization_1 (Bat  (None, 1278, 8)           32
+ chNormalization)
+
+ conv1d_1 (Conv1D)           (None, 1274, 16)          656
+
+ max_pooling1d_1 (MaxPoolin  (None, 637, 16)           0
+ g1D)
+
+ re_lu_1 (ReLU)              (None, 637, 16)           0
+
+ dropout_1 (Dropout)         (None, 637, 16)           0
+
+ batch_normalization_2 (Bat  (None, 637, 16)           64
+ chNormalization)
+
+ conv1d_2 (Conv1D)           (None, 633, 16)           1296
+
+ max_pooling1d_2 (MaxPoolin  (None, 316, 16)           0
+ g1D)
+
+ re_lu_2 (ReLU)              (None, 316, 16)           0
+
+ dropout_2 (Dropout)         (None, 316, 16)           0
+
+ seq_self_attention (SeqSel  (None, 316, 16)           1089
+ fAttention)
+
+ dense (Dense)               (None, 316, 64)           1088
+
+ dense_1 (Dense)             (None, 316, 32)           2080
+
+ flatten (Flatten)           (None, 10112)             0
+
+ dense_2 (Dense)             (None, 1)                 10113
+
+=================================================================
+Total params: 16470 (64.34 KB)
+Trainable params: 16420 (64.14 KB)
+Non-trainable params: 50 (200.00 Byte)
+_________________________________________________________________
+Files in the dataset:
+F:\CHB-MIT\Ictal_00.csv
+F:\CHB-MIT\Ictal_01.csv
+F:\CHB-MIT\Ictal_02.csv
+F:\CHB-MIT\Ictal_03.csv
+F:\CHB-MIT\Ictal_04.csv
+F:\CHB-MIT\Ictal_05.csv
+F:\CHB-MIT\Ictal_06.csv
+F:\CHB-MIT\Ictal_07.csv
+F:\CHB-MIT\Ictal_08.csv
+F:\CHB-MIT\Ictal_09.csv
+F:\CHB-MIT\Ictal_10.csv
+F:\CHB-MIT\Ictal_11.csv
+F:\CHB-MIT\Ictal_12.csv
+F:\CHB-MIT\Ictal_13.csv
+F:\CHB-MIT\Ictal_14.csv
+F:\CHB-MIT\Ictal_15.csv
+F:\CHB-MIT\Ictal_16.csv
+F:\CHB-MIT\Ictal_17.csv
+F:\CHB-MIT\Ictal_18.csv
+F:\CHB-MIT\Ictal_19.csv
+F:\CHB-MIT\Ictal_20.csv
+F:\CHB-MIT\Ictal_21.csv
+F:\CHB-MIT\Ictal_22.csv
+F:\CHB-MIT\Ictal_23.csv
+F:\CHB-MIT\Non-Ictal_00.csv
+F:\CHB-MIT\Non-Ictal_01.csv
+F:\CHB-MIT\Non-Ictal_02.csv
+F:\CHB-MIT\Non-Ictal_03.csv
+F:\CHB-MIT\Non-Ictal_04.csv
+F:\CHB-MIT\Non-Ictal_05.csv
+F:\CHB-MIT\Non-Ictal_06.csv
+F:\CHB-MIT\Non-Ictal_07.csv
+F:\CHB-MIT\Non-Ictal_08.csv
+F:\CHB-MIT\Non-Ictal_09.csv
+F:\CHB-MIT\Non-Ictal_10.csv
+F:\CHB-MIT\Non-Ictal_11.csv
+F:\CHB-MIT\Non-Ictal_12.csv
+F:\CHB-MIT\Non-Ictal_13.csv
+F:\CHB-MIT\Non-Ictal_14.csv
+F:\CHB-MIT\Non-Ictal_15.csv
+F:\CHB-MIT\Non-Ictal_16.csv
+F:\CHB-MIT\Non-Ictal_17.csv
+F:\CHB-MIT\Non-Ictal_18.csv
+F:\CHB-MIT\Non-Ictal_19.csv
+F:\CHB-MIT\Non-Ictal_20.csv
+F:\CHB-MIT\Non-Ictal_21.csv
+F:\CHB-MIT\Non-Ictal_22.csv
+F:\CHB-MIT\Non-Ictal_23.csv
+Ictal_00.csv
+Non-Ictal_00.csv
+Time used to read all data for patient 1: 1853.3283631801605 seconds
+Time used to concat the dataframe : 450.1213102340698 seconds
+Time used to split the data: 729.8590998649597
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+Baseline Loss: 2.4972
+Baseline Accuracy: 0.1721
+Attention Performance:
+=====================
+2026-01-11 13:07:53.477628: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2026-01-11 13:07:57.484025: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2026-01-11 13:07:57.774219: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2026-01-11 13:07:58.068151: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+2026-01-11 13:07:58.356165: W external/local_tsl/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 409010176 exceeds 10% of free system memory.
+Attention Loss: 0.9860
+Attention Accuracy: 0.6689
+Ictal_01.csv
+Non-Ictal_01.csv
+Time used to read all data for patient 2: 1382.628226518631 seconds
+Time used to concat the dataframe : 230.85468745231628 seconds
+Time used to split the data: 492.94854950904846
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.0239
+Baseline Accuracy: 0.2853
+Attention Performance:
+=====================
+Attention Loss: 0.7084
+Attention Accuracy: 0.7612
+Ictal_02.csv
+Non-Ictal_02.csv
+Time used to read all data for patient 3: 1602.111927986145 seconds
+Time used to concat the dataframe : 405.7950088977814 seconds
+Time used to split the data: 734.718870639801
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 3.6296
+Baseline Accuracy: 0.1364
+Attention Performance:
+=====================
+Attention Loss: 3.4913
+Attention Accuracy: 0.3896
+Ictal_03.csv
+Non-Ictal_03.csv
+Time used to read all data for patient 4: 7658.014206409454 seconds
+Time used to concat the dataframe : 1391.835523366928 seconds
+Time used to split the data: 2266.463483095169
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 3.3461
+Baseline Accuracy: 0.1956
+Attention Performance:
+=====================
+Attention Loss: 2.9911
+Attention Accuracy: 0.4480
+Ictal_04.csv
+Non-Ictal_04.csv
+Time used to read all data for patient 5: 1663.3157794475555 seconds
+Time used to concat the dataframe : 337.9975850582123 seconds
+Time used to split the data: 658.4155170917511
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 0.9017
+Baseline Accuracy: 0.5530
+Attention Performance:
+=====================
+Attention Loss: 0.4049
+Attention Accuracy: 0.8338
+Ictal_05.csv
+Non-Ictal_05.csv
+Time used to read all data for patient 6: 2786.293253660202 seconds
+Time used to concat the dataframe : 654.5089628696442 seconds
+Time used to split the data: 963.4671001434326
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 0.6461
+Baseline Accuracy: 0.6384
+Attention Performance:
+=====================
+Attention Loss: 0.8311
+Attention Accuracy: 0.6533
+Ictal_06.csv
+Non-Ictal_06.csv
+Time used to read all data for patient 7: 3000.410828590393 seconds
+Time used to concat the dataframe : 494.9573531150818 seconds
+Time used to split the data: 1000.8412375450134
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.7879
+Baseline Accuracy: 0.1776
+Attention Performance:
+=====================
+Attention Loss: 1.4871
+Attention Accuracy: 0.5923
+Ictal_07.csv
+Non-Ictal_07.csv
+Time used to read all data for patient 8: 469.17283964157104 seconds
+Time used to concat the dataframe : 120.76746153831482 seconds
+Time used to split the data: 282.33793354034424
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 1.0079
+Baseline Accuracy: 0.5121
+Attention Performance:
+=====================
+Attention Loss: 0.2694
+Attention Accuracy: 0.8927
+Ictal_08.csv
+Non-Ictal_08.csv
+Time used to read all data for patient 9: 3100.2043721675873 seconds
+Time used to concat the dataframe : 813.3543226718903 seconds
+Time used to split the data: 1414.282989025116
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 0.7429
+Baseline Accuracy: 0.6322
+Attention Performance:
+=====================
+Attention Loss: 0.4645
+Attention Accuracy: 0.7929
+Ictal_09.csv
+Non-Ictal_09.csv
+Time used to read all data for patient 10: 2165.6515316963196 seconds
+Time used to concat the dataframe : 353.5582766532898 seconds
+Time used to split the data: 836.3897104263306
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 0.8134
+Baseline Accuracy: 0.5894
+Attention Performance:
+=====================
+Attention Loss: 0.3195
+Attention Accuracy: 0.8820
+Ictal_10.csv
+Non-Ictal_10.csv
+Time used to read all data for patient 11: 1308.6479885578156 seconds
+Time used to concat the dataframe : 384.4149899482727 seconds
+Time used to split the data: 681.4608716964722
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 3.0056
+Baseline Accuracy: 0.1676
+Attention Performance:
+=====================
+Attention Loss: 2.2880
+Attention Accuracy: 0.5132
+Ictal_11.csv
+Non-Ictal_11.csv
+Time used to read all data for patient 12: 746.8342344760895 seconds
+Time used to concat the dataframe : 320.81227469444275 seconds
+Time used to split the data: 489.99375891685486
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.0364
+Baseline Accuracy: 0.2758
+Attention Performance:
+=====================
+Attention Loss: 1.6982
+Attention Accuracy: 0.6514
+Ictal_12.csv
+Non-Ictal_12.csv
+Time used to read all data for patient 13: 978.1576225757599 seconds
+Time used to concat the dataframe : 471.76219725608826 seconds
+Time used to split the data: 585.2404444217682
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 1.7929
+Baseline Accuracy: 0.3541
+Attention Performance:
+=====================
+Attention Loss: 0.9048
+Attention Accuracy: 0.7631
+Ictal_13.csv
+Non-Ictal_13.csv
+Time used to read all data for patient 14: 1021.8370966911316 seconds
+Time used to concat the dataframe : 394.26042008399963 seconds
+Time used to split the data: 604.0236663818359
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 1.6076
+Baseline Accuracy: 0.3432
+Attention Performance:
+=====================
+Attention Loss: 0.3714
+Attention Accuracy: 0.8868
+Ictal_14.csv
+Non-Ictal_14.csv
+Time used to read all data for patient 15: 2647.8371393680573 seconds
+Time used to concat the dataframe : 741.3628776073456 seconds
+Time used to split the data: 1243.2967972755432
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 4.2049
+Baseline Accuracy: 0.0520
+Attention Performance:
+=====================
+Attention Loss: 4.3980
+Attention Accuracy: 0.3386
+Ictal_15.csv
+Non-Ictal_15.csv
+Time used to read all data for patient 16: 433.2175145149231 seconds
+Time used to concat the dataframe : 151.89965057373047 seconds
+Time used to split the data: 317.4405403137207
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 3.0192
+Baseline Accuracy: 0.2042
+Attention Performance:
+=====================
+Attention Loss: 2.5041
+Attention Accuracy: 0.4737
+Ictal_16.csv
+Non-Ictal_16.csv
+Time used to read all data for patient 17: 1031.7663645744324 seconds
+Time used to concat the dataframe : 167.40700149536133 seconds
+Time used to split the data: 475.89875078201294
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 3.6145
+Baseline Accuracy: 0.0958
+Attention Performance:
+=====================
+Attention Loss: 3.1831
+Attention Accuracy: 0.4949
+Ictal_17.csv
+Non-Ictal_17.csv
+Time used to read all data for patient 18: 1569.2355155944824 seconds
+Time used to concat the dataframe : 536.816314458847 seconds
+Time used to split the data: 842.748486995697
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 4.3881
+Baseline Accuracy: 0.0430
+Attention Performance:
+=====================
+Attention Loss: 4.3805
+Attention Accuracy: 0.3603
+Ictal_18.csv
+Non-Ictal_18.csv
+Time used to read all data for patient 19: 1209.9978029727936 seconds
+Time used to concat the dataframe : 419.7309091091156 seconds
+Time used to split the data: 630.9652078151703
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 4.3790
+Baseline Accuracy: 0.0356
+Attention Performance:
+=====================
+Attention Loss: 4.4029
+Attention Accuracy: 0.3413
+Ictal_19.csv
+Non-Ictal_19.csv
+Time used to read all data for patient 20: 1026.909695148468 seconds
+Time used to concat the dataframe : 321.9513247013092 seconds
+Time used to split the data: 695.2694089412689
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.2390
+Baseline Accuracy: 0.2350
+Attention Performance:
+=====================
+Attention Loss: 1.8315
+Attention Accuracy: 0.6728
+Ictal_20.csv
+Non-Ictal_20.csv
+Time used to read all data for patient 21: 1978.4948003292084 seconds
+Time used to concat the dataframe : 519.0895144939423 seconds
+Time used to split the data: 874.7618186473846
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.9557
+Baseline Accuracy: 0.1642
+Attention Performance:
+=====================
+Attention Loss: 1.7772
+Attention Accuracy: 0.5663
+Ictal_21.csv
+Non-Ictal_21.csv
+Time used to read all data for patient 22: 1935.3585662841797 seconds
+Time used to concat the dataframe : 503.57127833366394 seconds
+Time used to split the data: 642.2033653259277
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.3912
+Baseline Accuracy: 0.2655
+Attention Performance:
+=====================
+Attention Loss: 1.4305
+Attention Accuracy: 0.6962
+Ictal_22.csv
+Non-Ictal_22.csv
+Time used to read all data for patient 23: 831.4659399986267 seconds
+Time used to concat the dataframe : 184.09244084358215 seconds
+Time used to split the data: 523.9982624053955
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 2.4924
+Baseline Accuracy: 0.2122
+Attention Performance:
+=====================
+Attention Loss: 1.0895
+Attention Accuracy: 0.6355
+Ictal_23.csv
+Non-Ictal_23.csv
+Time used to read all data for patient 24: 376.5262191295624 seconds
+Time used to concat the dataframe : 183.38950204849243 seconds
+Time used to split the data: 200.99681305885315
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+Baseline Loss: 1.6529
+Baseline Accuracy: 0.3521
+Attention Performance:
+=====================
+Attention Loss: 0.5187
+Attention Accuracy: 0.8058
