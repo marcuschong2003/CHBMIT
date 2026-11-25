@@ -1,0 +1,613 @@
+C:\Users\marcu\Documents\CHB-MIT>python eval.py
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-11-24 05:48:38.300257: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:6642: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 2558, 32)          128
+
+ batch_normalization (Batch  (None, 2558, 32)          128
+ Normalization)
+
+ re_lu (ReLU)                (None, 2558, 32)          0
+
+ max_pooling1d (MaxPooling1  (None, 1279, 32)          0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 1275, 64)          10304
+
+ batch_normalization_1 (Bat  (None, 1275, 64)          256
+ chNormalization)
+
+ re_lu_1 (ReLU)              (None, 1275, 64)          0
+
+ max_pooling1d_1 (MaxPoolin  (None, 319, 64)           0
+ g1D)
+
+ conv1d_2 (Conv1D)           (None, 307, 128)          106624
+
+ batch_normalization_2 (Bat  (None, 307, 128)          512
+ chNormalization)
+
+ re_lu_2 (ReLU)              (None, 307, 128)          0
+
+ max_pooling1d_2 (MaxPoolin  (None, 77, 128)           0
+ g1D)
+
+ flatten (Flatten)           (None, 9856)              0
+
+ dense (Dense)               (None, 64)                630848
+
+ dropout (Dropout)           (None, 64)                0
+
+ dense_1 (Dense)             (None, 1)                 65
+
+=================================================================
+Total params: 748865 (2.86 MB)
+Trainable params: 748417 (2.85 MB)
+Non-trainable params: 448 (1.75 KB)
+_________________________________________________________________
+Files in the dataset:
+F:\CHB-MIT\Ictal_00.csv
+F:\CHB-MIT\Ictal_01.csv
+F:\CHB-MIT\Ictal_02.csv
+F:\CHB-MIT\Ictal_03.csv
+F:\CHB-MIT\Ictal_04.csv
+F:\CHB-MIT\Ictal_05.csv
+F:\CHB-MIT\Ictal_06.csv
+F:\CHB-MIT\Ictal_07.csv
+F:\CHB-MIT\Ictal_08.csv
+F:\CHB-MIT\Ictal_09.csv
+F:\CHB-MIT\Ictal_10.csv
+F:\CHB-MIT\Ictal_11.csv
+F:\CHB-MIT\Ictal_12.csv
+F:\CHB-MIT\Ictal_13.csv
+F:\CHB-MIT\Ictal_14.csv
+F:\CHB-MIT\Ictal_15.csv
+F:\CHB-MIT\Ictal_16.csv
+F:\CHB-MIT\Ictal_17.csv
+F:\CHB-MIT\Ictal_18.csv
+F:\CHB-MIT\Ictal_19.csv
+F:\CHB-MIT\Ictal_20.csv
+F:\CHB-MIT\Ictal_21.csv
+F:\CHB-MIT\Ictal_22.csv
+F:\CHB-MIT\Ictal_23.csv
+F:\CHB-MIT\Non-Ictal_00.csv
+F:\CHB-MIT\Non-Ictal_01.csv
+F:\CHB-MIT\Non-Ictal_02.csv
+F:\CHB-MIT\Non-Ictal_03.csv
+F:\CHB-MIT\Non-Ictal_04.csv
+F:\CHB-MIT\Non-Ictal_05.csv
+F:\CHB-MIT\Non-Ictal_06.csv
+F:\CHB-MIT\Non-Ictal_07.csv
+F:\CHB-MIT\Non-Ictal_08.csv
+F:\CHB-MIT\Non-Ictal_09.csv
+F:\CHB-MIT\Non-Ictal_10.csv
+F:\CHB-MIT\Non-Ictal_11.csv
+F:\CHB-MIT\Non-Ictal_12.csv
+F:\CHB-MIT\Non-Ictal_13.csv
+F:\CHB-MIT\Non-Ictal_14.csv
+F:\CHB-MIT\Non-Ictal_15.csv
+F:\CHB-MIT\Non-Ictal_16.csv
+F:\CHB-MIT\Non-Ictal_17.csv
+F:\CHB-MIT\Non-Ictal_18.csv
+F:\CHB-MIT\Non-Ictal_19.csv
+F:\CHB-MIT\Non-Ictal_20.csv
+F:\CHB-MIT\Non-Ictal_21.csv
+F:\CHB-MIT\Non-Ictal_22.csv
+F:\CHB-MIT\Non-Ictal_23.csv
+Ictal_00.csv
+Non-Ictal_00.csv
+Time used to read all data for patient 1: 799.2248487472534 seconds
+Time used to concat the dataframe : 269.65587043762207 seconds
+Time used to split the data: 977.3036451339722
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+313/313 [==============================] - 17s 52ms/step
+Baseline Loss: 0.0308
+Baseline Accuracy: 0.9974
+Baseline Recall: 0.1739
+Baseline F1: 0.2353
+Rehearsal Performance:
+313/313 [==============================] - 15s 48ms/step
+Baseline Loss: 0.0199
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0435
+Baseline F1: 0.0833
+Ictal_01.csv
+Non-Ictal_01.csv
+Time used to read all data for patient 2: 1358.698799610138 seconds
+Time used to concat the dataframe : 360.08778524398804 seconds
+Time used to split the data: 633.9338428974152
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 15s 48ms/step
+Baseline Loss: 0.0252
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.3182
+Baseline F1: 0.2500
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0247
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_02.csv
+Non-Ictal_02.csv
+Time used to read all data for patient 3: 1537.8982231616974 seconds
+Time used to concat the dataframe : 442.40846967697144 seconds
+Time used to split the data: 791.7391567230225
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 51ms/step
+Baseline Loss: 0.1563
+Baseline Accuracy: 0.9943
+Baseline Recall: 0.0270
+Baseline F1: 0.0339
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0499
+Baseline Accuracy: 0.9963
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_03.csv
+Non-Ictal_03.csv
+Time used to read all data for patient 4: 8195.191952228546 seconds
+Time used to concat the dataframe : 1547.3862636089325 seconds
+Time used to split the data: 2548.176678419113
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 52ms/step
+Baseline Loss: 0.1219
+Baseline Accuracy: 0.9894
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_04.csv
+Non-Ictal_04.csv
+Time used to read all data for patient 5: 1190.4386067390442 seconds
+Time used to concat the dataframe : 344.3022212982178 seconds
+Time used to split the data: 748.4802649021149
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 18s 58ms/step
+Baseline Loss: 0.1260
+Baseline Accuracy: 0.9660
+Baseline Recall: 0.3611
+Baseline F1: 0.0710
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.0253
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0278
+Baseline F1: 0.0541
+Ictal_05.csv
+Non-Ictal_05.csv
+Time used to read all data for patient 6: 3032.43022608757 seconds
+Time used to concat the dataframe : 887.5429956912994 seconds
+Time used to split the data: 1208.7745530605316
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 50ms/step
+Baseline Loss: 0.2181
+Baseline Accuracy: 0.9015
+Baseline Recall: 0.3077
+Baseline F1: 0.0081
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.0149
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_06.csv
+Non-Ictal_06.csv
+Time used to read all data for patient 7: 2714.5826642513275 seconds
+Time used to concat the dataframe : 845.1151676177979 seconds
+Time used to split the data: 1353.0472226142883
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 51ms/step
+Baseline Loss: 0.0610
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.3158
+Baseline F1: 0.2353
+Rehearsal Performance:
+313/313 [==============================] - 18s 58ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0164
+Baseline Accuracy: 0.9981
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_07.csv
+Non-Ictal_07.csv
+Time used to read all data for patient 8: 453.3374559879303 seconds
+Time used to concat the dataframe : 41.978604555130005 seconds
+Time used to split the data: 188.26066160202026
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.1507
+Baseline Accuracy: 0.9858
+Baseline Recall: 0.2676
+Baseline F1: 0.3486
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.1125
+Baseline Accuracy: 0.9860
+Baseline Recall: 0.0141
+Baseline F1: 0.0278
+Ictal_08.csv
+Non-Ictal_08.csv
+Time used to read all data for patient 9: 3342.8327763080597 seconds
+Time used to concat the dataframe : 990.9916479587555 seconds
+Time used to split the data: 1207.8478412628174
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 51ms/step
+Baseline Loss: 0.1251
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3846
+Baseline F1: 0.0549
+Rehearsal Performance:
+313/313 [==============================] - 16s 50ms/step
+Baseline Loss: 0.0099
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.2308
+Baseline F1: 0.3529
+Ictal_09.csv
+Non-Ictal_09.csv
+Time used to read all data for patient 10: 2131.7473373413086 seconds
+Time used to concat the dataframe : 703.3307814598083 seconds
+Time used to split the data: 1067.625860452652
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 52ms/step
+Baseline Loss: 0.2858
+Baseline Accuracy: 0.9241
+Baseline Recall: 0.3667
+Baseline F1: 0.0282
+Rehearsal Performance:
+313/313 [==============================] - 17s 53ms/step
+Baseline Loss: 0.0660
+Baseline Accuracy: 0.9970
+Baseline Recall: 0.0333
+Baseline F1: 0.0625
+Ictal_10.csv
+Non-Ictal_10.csv
+Time used to read all data for patient 11: 1547.6599519252777 seconds
+Time used to concat the dataframe : 441.10581731796265 seconds
+Time used to split the data: 733.4090278148651
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 51ms/step
+Baseline Loss: 0.1248
+Baseline Accuracy: 0.9933
+Baseline Recall: 0.2133
+Baseline F1: 0.3232
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.0941
+Baseline Accuracy: 0.9926
+Baseline Recall: 0.0133
+Baseline F1: 0.0263
+Ictal_11.csv
+Non-Ictal_11.csv
+Time used to read all data for patient 12: 499.40769147872925 seconds
+Time used to concat the dataframe : 221.61486911773682 seconds
+Time used to split the data: 351.8388521671295
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 17s 55ms/step
+Baseline Loss: 0.3679
+Baseline Accuracy: 0.9721
+Baseline Recall: 0.0599
+Baseline F1: 0.0852
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.2978
+Baseline Accuracy: 0.9783
+Baseline Recall: 0.0046
+Baseline F1: 0.0091
+Ictal_12.csv
+Non-Ictal_12.csv
+Time used to read all data for patient 13: 1186.5311362743378 seconds
+Time used to concat the dataframe : 336.5570991039276 seconds
+Time used to split the data: 516.7610378265381
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.1966
+Baseline Accuracy: 0.9859
+Baseline Recall: 0.0781
+Baseline F1: 0.0662
+Rehearsal Performance:
+313/313 [==============================] - 18s 57ms/step
+Baseline Loss: 0.0955
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_13.csv
+Non-Ictal_13.csv
+Time used to read all data for patient 14: 697.1578407287598 seconds
+Time used to concat the dataframe : 318.67335295677185 seconds
+Time used to split the data: 538.6091637611389
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 18s 57ms/step
+Baseline Loss: 0.0927
+Baseline Accuracy: 0.9842
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0270
+Baseline Accuracy: 0.9981
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_14.csv
+Non-Ictal_14.csv
+Time used to read all data for patient 15: 2929.5206582546234 seconds
+Time used to concat the dataframe : 708.3191201686859 seconds
+Time used to split the data: 1000.1304376125336
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 17s 55ms/step
+Baseline Loss: 0.3273
+Baseline Accuracy: 0.9846
+Baseline Recall: 0.0069
+Baseline F1: 0.0128
+Rehearsal Performance:
+313/313 [==============================] - 16s 50ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2634
+Baseline Accuracy: 0.9855
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_15.csv
+Non-Ictal_15.csv
+Time used to read all data for patient 16: 492.1901981830597 seconds
+Time used to concat the dataframe : 267.21846532821655 seconds
+Time used to split the data: 543.0267014503479
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 51ms/step
+Baseline Loss: 0.1161
+Baseline Accuracy: 0.9905
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance:
+313/313 [==============================] - 17s 54ms/step
+Baseline Loss: 0.0373
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_16.csv
+Non-Ictal_16.csv
+Time used to read all data for patient 17: 749.6432726383209 seconds
+Time used to concat the dataframe : 285.129775762558 seconds
+Time used to split the data: 259.13703656196594
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 17s 55ms/step
+Baseline Loss: 0.0557
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0625
+Baseline F1: 0.0870
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0547
+Baseline Accuracy: 0.9968
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_17.csv
+Non-Ictal_17.csv
+Time used to read all data for patient 18: 1734.5855886936188 seconds
+Time used to concat the dataframe : 615.4107956886292 seconds
+Time used to split the data: 708.7266438007355
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 51ms/step
+Baseline Loss: 0.0942
+Baseline Accuracy: 0.9959
+Baseline Recall: 0.0256
+Baseline F1: 0.0465
+Rehearsal Performance:
+313/313 [==============================] - 16s 50ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0573
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_18.csv
+Non-Ictal_18.csv
+Time used to read all data for patient 19: 1402.3140406608582 seconds
+Time used to concat the dataframe : 535.0731720924377 seconds
+Time used to split the data: 678.6855754852295
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 19s 59ms/step
+Baseline Loss: 0.0360
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0625
+Baseline F1: 0.0741
+Rehearsal Performance:
+313/313 [==============================] - 17s 53ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0267
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_19.csv
+Non-Ictal_19.csv
+Time used to read all data for patient 20: 1042.3096704483032 seconds
+Time used to concat the dataframe : 394.5758237838745 seconds
+Time used to split the data: 586.7578816413879
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 18s 57ms/step
+Baseline Loss: 0.1527
+Baseline Accuracy: 0.9859
+Baseline Recall: 0.0714
+Baseline F1: 0.0408
+Rehearsal Performance:
+313/313 [==============================] - 16s 50ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0568
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_20.csv
+Non-Ictal_20.csv
+Time used to read all data for patient 21: 1701.4177644252777 seconds
+Time used to concat the dataframe : 511.61933636665344 seconds
+Time used to split the data: 626.1769826412201
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 16s 53ms/step
+Baseline Loss: 0.0563
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0313
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_21.csv
+Non-Ictal_21.csv
+Time used to read all data for patient 22: 1550.4099905490875 seconds
+Time used to concat the dataframe : 557.4283177852631 seconds
+Time used to split the data: 755.6774406433105
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.0680
+Baseline Accuracy: 0.9974
+Baseline Recall: 0.1053
+Baseline F1: 0.1333
+Rehearsal Performance:
+313/313 [==============================] - 15s 49ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0321
+Baseline Accuracy: 0.9981
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_22.csv
+Non-Ictal_22.csv
+Time used to read all data for patient 23: 1240.236419916153 seconds
+Time used to concat the dataframe : 275.2368564605713 seconds
+Time used to split the data: 416.61761498451233
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 15s 49ms/step
+Baseline Loss: 0.1015
+Baseline Accuracy: 0.9937
+Baseline Recall: 0.0862
+Baseline F1: 0.1370
+Rehearsal Performance:
+313/313 [==============================] - 16s 50ms/step
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0844
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_23.csv
+Non-Ictal_23.csv
+Time used to read all data for patient 24: 756.7937526702881 seconds
+Time used to concat the dataframe : 99.44020676612854 seconds
+Time used to split the data: 253.35759091377258
+Shape of X_test: (10000, 2560, 1)
+Shape of Y_test: (10000,)
+Baseline Performance:
+=====================
+313/313 [==============================] - 15s 48ms/step
+Baseline Loss: 0.0995
+Baseline Accuracy: 0.9913
+Baseline Recall: 0.4651
+Baseline F1: 0.4790
+Rehearsal Performance:
+313/313 [==============================] - 15s 48ms/step
+Baseline Loss: 0.0777
+Baseline Accuracy: 0.9921
+Baseline Recall: 0.1047
+Baseline F1: 0.1856
