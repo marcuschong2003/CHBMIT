@@ -1,0 +1,5727 @@
+C:\Users\marcu\Documents\CHB-MIT>python eval.py
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-11-25 22:36:29.399662: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\backend.py:6642: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 2558, 32)          128
+
+ batch_normalization (Batch  (None, 2558, 32)          128
+ Normalization)
+
+ re_lu (ReLU)                (None, 2558, 32)          0
+
+ max_pooling1d (MaxPooling1  (None, 1279, 32)          0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 1275, 64)          10304
+
+ batch_normalization_1 (Bat  (None, 1275, 64)          256
+ chNormalization)
+
+ re_lu_1 (ReLU)              (None, 1275, 64)          0
+
+ max_pooling1d_1 (MaxPoolin  (None, 319, 64)           0
+ g1D)
+
+ conv1d_2 (Conv1D)           (None, 307, 128)          106624
+
+ batch_normalization_2 (Bat  (None, 307, 128)          512
+ chNormalization)
+
+ re_lu_2 (ReLU)              (None, 307, 128)          0
+
+ max_pooling1d_2 (MaxPoolin  (None, 77, 128)           0
+ g1D)
+
+ flatten (Flatten)           (None, 9856)              0
+
+ dense (Dense)               (None, 64)                630848
+
+ dropout (Dropout)           (None, 64)                0
+
+ dense_1 (Dense)             (None, 1)                 65
+
+=================================================================
+Total params: 748865 (2.86 MB)
+Trainable params: 748417 (2.85 MB)
+Non-trainable params: 448 (1.75 KB)
+_________________________________________________________________
+Files in the dataset:
+F:\CHB-MIT\Ictal_00.csv
+F:\CHB-MIT\Ictal_01.csv
+F:\CHB-MIT\Ictal_02.csv
+F:\CHB-MIT\Ictal_03.csv
+F:\CHB-MIT\Ictal_04.csv
+F:\CHB-MIT\Ictal_05.csv
+F:\CHB-MIT\Ictal_06.csv
+F:\CHB-MIT\Ictal_07.csv
+F:\CHB-MIT\Ictal_08.csv
+F:\CHB-MIT\Ictal_09.csv
+F:\CHB-MIT\Ictal_10.csv
+F:\CHB-MIT\Ictal_11.csv
+F:\CHB-MIT\Ictal_12.csv
+F:\CHB-MIT\Ictal_13.csv
+F:\CHB-MIT\Ictal_14.csv
+F:\CHB-MIT\Ictal_15.csv
+F:\CHB-MIT\Ictal_16.csv
+F:\CHB-MIT\Ictal_17.csv
+F:\CHB-MIT\Ictal_18.csv
+F:\CHB-MIT\Ictal_19.csv
+F:\CHB-MIT\Ictal_20.csv
+F:\CHB-MIT\Ictal_21.csv
+F:\CHB-MIT\Ictal_22.csv
+F:\CHB-MIT\Ictal_23.csv
+F:\CHB-MIT\Non-Ictal_00.csv
+F:\CHB-MIT\Non-Ictal_01.csv
+F:\CHB-MIT\Non-Ictal_02.csv
+F:\CHB-MIT\Non-Ictal_03.csv
+F:\CHB-MIT\Non-Ictal_04.csv
+F:\CHB-MIT\Non-Ictal_05.csv
+F:\CHB-MIT\Non-Ictal_06.csv
+F:\CHB-MIT\Non-Ictal_07.csv
+F:\CHB-MIT\Non-Ictal_08.csv
+F:\CHB-MIT\Non-Ictal_09.csv
+F:\CHB-MIT\Non-Ictal_10.csv
+F:\CHB-MIT\Non-Ictal_11.csv
+F:\CHB-MIT\Non-Ictal_12.csv
+F:\CHB-MIT\Non-Ictal_13.csv
+F:\CHB-MIT\Non-Ictal_14.csv
+F:\CHB-MIT\Non-Ictal_15.csv
+F:\CHB-MIT\Non-Ictal_16.csv
+F:\CHB-MIT\Non-Ictal_17.csv
+F:\CHB-MIT\Non-Ictal_18.csv
+F:\CHB-MIT\Non-Ictal_19.csv
+F:\CHB-MIT\Non-Ictal_20.csv
+F:\CHB-MIT\Non-Ictal_21.csv
+F:\CHB-MIT\Non-Ictal_22.csv
+F:\CHB-MIT\Non-Ictal_23.csv
+Ictal_00.csv
+Non-Ictal_00.csv
+Time used to read all data for patient 1: 1064.6279916763306 seconds
+Time used to concat the dataframe : 367.9914128780365 seconds
+Time used to split the data: 850.761590719223
+Shape of X_test: (66967, 2560, 1)
+Shape of Y_test: (66967,)
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2093/2093 [==============================] - 103s 49ms/step
+2093/2093 [==============================] - 104s 49ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.3182
+Baseline F1: 0.2588
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0364
+Baseline F1: 0.0696
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2909
+Baseline F1: 0.2695
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0227
+Baseline F1: 0.0441
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2864
+Baseline F1: 0.2877
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0182
+Baseline F1: 0.0354
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2682
+Baseline F1: 0.2871
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0182
+Baseline F1: 0.0357
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2545
+Baseline F1: 0.2894
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0136
+Baseline F1: 0.0269
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2455
+Baseline F1: 0.2943
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2409
+Baseline F1: 0.2969
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2364
+Baseline F1: 0.2980
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2273
+Baseline F1: 0.2985
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2227
+Baseline F1: 0.2988
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2227
+Baseline F1: 0.3043
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2227
+Baseline F1: 0.3121
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2136
+Baseline F1: 0.3072
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.2136
+Baseline F1: 0.3102
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0045
+Baseline F1: 0.0090
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.1955
+Baseline F1: 0.2925
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.1818
+Baseline F1: 0.2827
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.1773
+Baseline F1: 0.2868
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0522
+Baseline Accuracy: 0.9966
+Baseline Recall: 0.1318
+Baseline F1: 0.2266
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0369
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_01.csv
+Non-Ictal_01.csv
+Time used to read all data for patient 2: 1544.581771850586 seconds
+Time used to concat the dataframe : 465.1168701648712 seconds
+Time used to split the data: 785.264119386673
+Shape of X_test: (58236, 2560, 1)
+Shape of Y_test: (58236,)
+1820/1820 [==============================] - 93s 51ms/step
+1820/1820 [==============================] - 92s 50ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.5875
+Baseline F1: 0.1632
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0625
+Baseline F1: 0.1053
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.5500
+Baseline F1: 0.1872
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0500
+Baseline F1: 0.0899
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.5250
+Baseline F1: 0.2074
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0375
+Baseline F1: 0.0706
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.5000
+Baseline F1: 0.2174
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0250
+Baseline F1: 0.0482
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.4750
+Baseline F1: 0.2216
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0250
+Baseline F1: 0.0488
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.4500
+Baseline F1: 0.2236
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0250
+Baseline F1: 0.0488
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.4500
+Baseline F1: 0.2424
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0250
+Baseline F1: 0.0488
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.4375
+Baseline F1: 0.2564
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0250
+Baseline F1: 0.0488
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.4125
+Baseline F1: 0.2609
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0125
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.4125
+Baseline F1: 0.2797
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0125
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.3875
+Baseline F1: 0.2831
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0125
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.3750
+Baseline F1: 0.2791
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0125
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.3625
+Baseline F1: 0.2857
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0125
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.3625
+Baseline F1: 0.3021
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0125
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.3375
+Baseline F1: 0.2967
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.2875
+Baseline F1: 0.2822
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.2375
+Baseline F1: 0.2734
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0177
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.2250
+Baseline F1: 0.2903
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0156
+Baseline Accuracy: 0.9986
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_02.csv
+Non-Ictal_02.csv
+Time used to read all data for patient 3: 1788.747219800949 seconds
+Time used to concat the dataframe : 455.3282461166382 seconds
+Time used to split the data: 672.2149579524994
+Shape of X_test: (62758, 2560, 1)
+Shape of Y_test: (62758,)
+1962/1962 [==============================] - 119s 61ms/step
+1962/1962 [==============================] - 103s 53ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0976
+Baseline F1: 0.0664
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0049
+Baseline F1: 0.0086
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0829
+Baseline F1: 0.0649
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0049
+Baseline F1: 0.0088
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0732
+Baseline F1: 0.0633
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0049
+Baseline F1: 0.0092
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0732
+Baseline F1: 0.0680
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0732
+Baseline F1: 0.0725
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0683
+Baseline F1: 0.0705
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0634
+Baseline F1: 0.0675
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0585
+Baseline F1: 0.0645
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0585
+Baseline F1: 0.0665
+Rehearsal Performance with threshold 0.45:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0488
+Baseline F1: 0.0567
+Rehearsal Performance with threshold 0.5:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0439
+Baseline F1: 0.0525
+Rehearsal Performance with threshold 0.55:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0439
+Baseline F1: 0.0537
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0439
+Baseline F1: 0.0550
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0390
+Baseline F1: 0.0500
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0390
+Baseline F1: 0.0525
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0390
+Baseline F1: 0.0535
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0341
+Baseline F1: 0.0495
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1311
+Baseline Accuracy: 0.9947
+Baseline Recall: 0.0195
+Baseline F1: 0.0312
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0422
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_03.csv
+Non-Ictal_03.csv
+Time used to read all data for patient 4: 8827.127738237381 seconds
+Time used to concat the dataframe : 1778.8665919303894 seconds
+Time used to split the data: 3839.992043018341
+Shape of X_test: (267886, 2560, 1)
+Shape of Y_test: (267886,)
+8372/8372 [==============================] - 420s 50ms/step
+8372/8372 [==============================] - 436s 52ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.1005
+Baseline F1: 0.0077
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0955
+Baseline F1: 0.0084
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0905
+Baseline F1: 0.0086
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0905
+Baseline F1: 0.0092
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0754
+Baseline F1: 0.0081
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0754
+Baseline F1: 0.0085
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0704
+Baseline F1: 0.0083
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0653
+Baseline F1: 0.0080
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0653
+Baseline F1: 0.0084
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0603
+Baseline F1: 0.0081
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0503
+Baseline F1: 0.0071
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0503
+Baseline F1: 0.0073
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0452
+Baseline F1: 0.0069
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0452
+Baseline F1: 0.0073
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0402
+Baseline F1: 0.0070
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0302
+Baseline F1: 0.0057
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0302
+Baseline F1: 0.0066
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0952
+Baseline Accuracy: 0.9891
+Baseline Recall: 0.0201
+Baseline F1: 0.0056
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0182
+Baseline Accuracy: 0.9990
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_04.csv
+Non-Ictal_04.csv
+Time used to read all data for patient 5: 2005.9039833545685 seconds
+Time used to concat the dataframe : 388.10340452194214 seconds
+Time used to split the data: 667.4613811969757
+Shape of X_test: (64410, 2560, 1)
+Shape of Y_test: (64410,)
+2013/2013 [==============================] - 99s 49ms/step
+2013/2013 [==============================] - 98s 48ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.4453
+Baseline F1: 0.0512
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.2264
+Baseline F1: 0.2778
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.4226
+Baseline F1: 0.0570
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.1849
+Baseline F1: 0.2800
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.4189
+Baseline F1: 0.0630
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.1509
+Baseline F1: 0.2432
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.4189
+Baseline F1: 0.0683
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.1283
+Baseline F1: 0.2152
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.4151
+Baseline F1: 0.0726
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.1057
+Baseline F1: 0.1848
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.4075
+Baseline F1: 0.0762
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0943
+Baseline F1: 0.1672
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3962
+Baseline F1: 0.0784
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0830
+Baseline F1: 0.1497
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3849
+Baseline F1: 0.0806
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0604
+Baseline F1: 0.1119
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3811
+Baseline F1: 0.0853
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0604
+Baseline F1: 0.1127
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3736
+Baseline F1: 0.0891
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0528
+Baseline F1: 0.0993
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3660
+Baseline F1: 0.0927
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0453
+Baseline F1: 0.0860
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3585
+Baseline F1: 0.0968
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0340
+Baseline F1: 0.0652
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3434
+Baseline F1: 0.1008
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0189
+Baseline F1: 0.0369
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3245
+Baseline F1: 0.1021
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0151
+Baseline F1: 0.0296
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3170
+Baseline F1: 0.1086
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0113
+Baseline F1: 0.0223
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.3019
+Baseline F1: 0.1164
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0113
+Baseline F1: 0.0223
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.2717
+Baseline F1: 0.1233
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0075
+Baseline F1: 0.0149
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1851
+Baseline Accuracy: 0.9686
+Baseline Recall: 0.2264
+Baseline F1: 0.1319
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0351
+Baseline Accuracy: 0.9961
+Baseline Recall: 0.0038
+Baseline F1: 0.0075
+Ictal_05.csv
+Non-Ictal_05.csv
+Time used to read all data for patient 6: 3635.7137291431427 seconds
+Time used to concat the dataframe : 808.5388264656067 seconds
+Time used to split the data: 1147.3082160949707
+Shape of X_test: (110437, 2560, 1)
+Shape of Y_test: (110437,)
+3452/3452 [==============================] - 173s 50ms/step
+3452/3452 [==============================] - 174s 50ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.3628
+Baseline F1: 0.0039
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0088
+Baseline F1: 0.0057
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.3097
+Baseline F1: 0.0038
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2920
+Baseline F1: 0.0040
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2920
+Baseline F1: 0.0043
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2743
+Baseline F1: 0.0043
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2655
+Baseline F1: 0.0044
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2566
+Baseline F1: 0.0045
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2301
+Baseline F1: 0.0043
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2212
+Baseline F1: 0.0044
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.2035
+Baseline F1: 0.0043
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1947
+Baseline F1: 0.0044
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1947
+Baseline F1: 0.0047
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1770
+Baseline F1: 0.0046
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1770
+Baseline F1: 0.0049
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1681
+Baseline F1: 0.0052
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1593
+Baseline F1: 0.0056
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1416
+Baseline F1: 0.0061
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.2225
+Baseline Accuracy: 0.9031
+Baseline Recall: 0.1062
+Baseline F1: 0.0072
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0130
+Baseline Accuracy: 0.9989
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_06.csv
+Non-Ictal_06.csv
+Time used to read all data for patient 7: 3568.1529223918915 seconds
+Time used to concat the dataframe : 828.3869478702545 seconds
+Time used to split the data: 991.144145488739
+Shape of X_test: (110962, 2560, 1)
+Shape of Y_test: (110962,)
+3468/3468 [==============================] - 176s 51ms/step
+3468/3468 [==============================] - 177s 51ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3500
+Baseline F1: 0.0795
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0944
+Baseline F1: 0.1525
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3222
+Baseline F1: 0.0906
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0444
+Baseline F1: 0.0800
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3056
+Baseline F1: 0.0995
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0278
+Baseline F1: 0.0518
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3056
+Baseline F1: 0.1095
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0222
+Baseline F1: 0.0428
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3000
+Baseline F1: 0.1171
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0167
+Baseline F1: 0.0324
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3000
+Baseline F1: 0.1259
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.3000
+Baseline F1: 0.1360
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2889
+Baseline F1: 0.1389
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2833
+Baseline F1: 0.1459
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2667
+Baseline F1: 0.1466
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2611
+Baseline F1: 0.1559
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2611
+Baseline F1: 0.1635
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2389
+Baseline F1: 0.1614
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2333
+Baseline F1: 0.1732
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2222
+Baseline F1: 0.1798
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.2111
+Baseline F1: 0.1891
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.1889
+Baseline F1: 0.1899
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0606
+Baseline Accuracy: 0.9950
+Baseline Recall: 0.1444
+Baseline F1: 0.1733
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0157
+Baseline Accuracy: 0.9984
+Baseline Recall: 0.0056
+Baseline F1: 0.0110
+Ictal_07.csv
+Non-Ictal_07.csv
+Time used to read all data for patient 8: 603.5128231048584 seconds
+Time used to concat the dataframe : 227.87845706939697 seconds
+Time used to split the data: 273.29455614089966
+Shape of X_test: (33042, 2560, 1)
+Shape of Y_test: (33042,)
+1033/1033 [==============================] - 50s 49ms/step
+1033/1033 [==============================] - 50s 48ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.4577
+Baseline F1: 0.3697
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.1213
+Baseline F1: 0.2112
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.4211
+Baseline F1: 0.3849
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0801
+Baseline F1: 0.1468
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3982
+Baseline F1: 0.3880
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0618
+Baseline F1: 0.1161
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3730
+Baseline F1: 0.3835
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0503
+Baseline F1: 0.0957
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3661
+Baseline F1: 0.3912
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0458
+Baseline F1: 0.0875
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3593
+Baseline F1: 0.4005
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0412
+Baseline F1: 0.0791
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3524
+Baseline F1: 0.4000
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0389
+Baseline F1: 0.0749
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3501
+Baseline F1: 0.4080
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0366
+Baseline F1: 0.0706
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3387
+Baseline F1: 0.4083
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0343
+Baseline F1: 0.0664
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3364
+Baseline F1: 0.4153
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0275
+Baseline F1: 0.0535
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3295
+Baseline F1: 0.4144
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0252
+Baseline F1: 0.0491
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3249
+Baseline F1: 0.4195
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0229
+Baseline F1: 0.0447
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3204
+Baseline F1: 0.4230
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0206
+Baseline F1: 0.0404
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3135
+Baseline F1: 0.4255
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0183
+Baseline F1: 0.0360
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.3066
+Baseline F1: 0.4261
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0183
+Baseline F1: 0.0360
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.2883
+Baseline F1: 0.4158
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0183
+Baseline F1: 0.0360
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.2746
+Baseline F1: 0.4089
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0092
+Baseline F1: 0.0181
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1617
+Baseline Accuracy: 0.9875
+Baseline Recall: 0.2494
+Baseline F1: 0.3893
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1034
+Baseline Accuracy: 0.9871
+Baseline Recall: 0.0023
+Baseline F1: 0.0046
+Ictal_08.csv
+Non-Ictal_08.csv
+Time used to read all data for patient 9: 3916.589430332184 seconds
+Time used to concat the dataframe : 883.5924475193024 seconds
+Time used to split the data: 1056.8427362442017
+Shape of X_test: (117056, 2560, 1)
+Shape of Y_test: (117056,)
+3658/3658 [==============================] - 184s 50ms/step
+3658/3658 [==============================] - 182s 50ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3907
+Baseline F1: 0.0178
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.2649
+Baseline F1: 0.2787
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3709
+Baseline F1: 0.0215
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.1987
+Baseline F1: 0.2490
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3576
+Baseline F1: 0.0246
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.1589
+Baseline F1: 0.2182
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3444
+Baseline F1: 0.0270
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.1391
+Baseline F1: 0.2000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3377
+Baseline F1: 0.0296
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.1325
+Baseline F1: 0.1961
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3245
+Baseline F1: 0.0313
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.1192
+Baseline F1: 0.1818
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3245
+Baseline F1: 0.0346
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0993
+Baseline F1: 0.1596
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3245
+Baseline F1: 0.0385
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0861
+Baseline F1: 0.1413
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3179
+Baseline F1: 0.0412
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0861
+Baseline F1: 0.1421
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3113
+Baseline F1: 0.0447
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0861
+Baseline F1: 0.1436
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.3113
+Baseline F1: 0.0496
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0728
+Baseline F1: 0.1250
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2980
+Baseline F1: 0.0530
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0728
+Baseline F1: 0.1272
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2914
+Baseline F1: 0.0587
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0662
+Baseline F1: 0.1163
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2781
+Baseline F1: 0.0648
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0530
+Baseline F1: 0.0952
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2715
+Baseline F1: 0.0743
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0397
+Baseline F1: 0.0723
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2715
+Baseline F1: 0.0924
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0331
+Baseline F1: 0.0613
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2583
+Baseline F1: 0.1169
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0132
+Baseline F1: 0.0255
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0883
+Baseline Accuracy: 0.9828
+Baseline Recall: 0.2318
+Baseline F1: 0.1651
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0121
+Baseline Accuracy: 0.9987
+Baseline Recall: 0.0066
+Baseline F1: 0.0131
+Ictal_09.csv
+Non-Ictal_09.csv
+Time used to read all data for patient 10: 2298.153589487076 seconds
+Time used to concat the dataframe : 634.1555471420288 seconds
+Time used to split the data: 877.2863647937775
+Shape of X_test: (82736, 2560, 1)
+Shape of Y_test: (82736,)
+2586/2586 [==============================] - 133s 51ms/step
+2586/2586 [==============================] - 127s 49ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.4304
+Baseline F1: 0.0185
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1181
+Baseline F1: 0.1127
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3966
+Baseline F1: 0.0193
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0970
+Baseline F1: 0.1240
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3713
+Baseline F1: 0.0196
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0928
+Baseline F1: 0.1325
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3544
+Baseline F1: 0.0199
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0886
+Baseline F1: 0.1382
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3460
+Baseline F1: 0.0206
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0759
+Baseline F1: 0.1263
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3418
+Baseline F1: 0.0213
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0633
+Baseline F1: 0.1091
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3333
+Baseline F1: 0.0218
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0633
+Baseline F1: 0.1107
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3207
+Baseline F1: 0.0219
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0633
+Baseline F1: 0.1124
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3165
+Baseline F1: 0.0226
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0549
+Baseline F1: 0.0992
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.3038
+Baseline F1: 0.0226
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0506
+Baseline F1: 0.0930
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2996
+Baseline F1: 0.0235
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0464
+Baseline F1: 0.0856
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2954
+Baseline F1: 0.0244
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0422
+Baseline F1: 0.0791
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2869
+Baseline F1: 0.0250
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0338
+Baseline F1: 0.0637
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2700
+Baseline F1: 0.0248
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0253
+Baseline F1: 0.0488
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2616
+Baseline F1: 0.0258
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0253
+Baseline F1: 0.0488
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2489
+Baseline F1: 0.0266
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0169
+Baseline F1: 0.0331
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.2110
+Baseline F1: 0.0251
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0169
+Baseline F1: 0.0331
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.2539
+Baseline Accuracy: 0.9249
+Baseline Recall: 0.1688
+Baseline F1: 0.0239
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0317
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.0084
+Baseline F1: 0.0167
+Ictal_10.csv
+Non-Ictal_10.csv
+Time used to read all data for patient 11: 1555.431051492691 seconds
+Time used to concat the dataframe : 403.7690751552582 seconds
+Time used to split the data: 599.5479743480682
+Shape of X_test: (69591, 2560, 1)
+Shape of Y_test: (69591,)
+2175/2175 [==============================] - 109s 50ms/step
+2175/2175 [==============================] - 111s 51ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.3872
+Baseline F1: 0.3002
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.1069
+Baseline F1: 0.1931
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.3563
+Baseline F1: 0.3268
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0950
+Baseline F1: 0.1735
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.3492
+Baseline F1: 0.3479
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0784
+Baseline F1: 0.1454
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.3468
+Baseline F1: 0.3664
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0760
+Baseline F1: 0.1413
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.3278
+Baseline F1: 0.3632
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0641
+Baseline F1: 0.1205
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.3159
+Baseline F1: 0.3614
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0570
+Baseline F1: 0.1079
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2993
+Baseline F1: 0.3554
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0546
+Baseline F1: 0.1036
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2969
+Baseline F1: 0.3628
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0475
+Baseline F1: 0.0907
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2898
+Baseline F1: 0.3642
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0356
+Baseline F1: 0.0688
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2755
+Baseline F1: 0.3614
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0238
+Baseline F1: 0.0464
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2732
+Baseline F1: 0.3674
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0190
+Baseline F1: 0.0373
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2708
+Baseline F1: 0.3719
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0166
+Baseline F1: 0.0327
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2542
+Baseline F1: 0.3567
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0143
+Baseline F1: 0.0281
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2494
+Baseline F1: 0.3596
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0119
+Baseline F1: 0.0235
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2375
+Baseline F1: 0.3527
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0095
+Baseline F1: 0.0188
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2328
+Baseline F1: 0.3583
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0048
+Baseline F1: 0.0095
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.2185
+Baseline F1: 0.3491
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0048
+Baseline F1: 0.0095
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0841
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.1876
+Baseline F1: 0.3123
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0679
+Baseline Accuracy: 0.9941
+Baseline Recall: 0.0048
+Baseline F1: 0.0095
+Ictal_11.csv
+Non-Ictal_11.csv
+Time used to read all data for patient 12: 1660.3062007427216 seconds
+Time used to concat the dataframe : 506.00858092308044 seconds
+Time used to split the data: 517.2061336040497
+Shape of X_test: (48663, 2560, 1)
+Shape of Y_test: (48663,)
+1521/1521 [==============================] - 80s 52ms/step
+1521/1521 [==============================] - 82s 54ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.1315
+Baseline F1: 0.1222
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0060
+Baseline F1: 0.0113
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.1086
+Baseline F1: 0.1132
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0060
+Baseline F1: 0.0115
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0946
+Baseline F1: 0.1054
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0030
+Baseline F1: 0.0058
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0886
+Baseline F1: 0.1031
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0030
+Baseline F1: 0.0058
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0837
+Baseline F1: 0.1012
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0030
+Baseline F1: 0.0058
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0757
+Baseline F1: 0.0944
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0030
+Baseline F1: 0.0059
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0697
+Baseline F1: 0.0894
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0039
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0657
+Baseline F1: 0.0862
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0039
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0618
+Baseline F1: 0.0827
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0039
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0588
+Baseline F1: 0.0805
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0039
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0538
+Baseline F1: 0.0758
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0039
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0468
+Baseline F1: 0.0680
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0428
+Baseline F1: 0.0636
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0418
+Baseline F1: 0.0633
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0388
+Baseline F1: 0.0606
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0349
+Baseline F1: 0.0563
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0289
+Baseline F1: 0.0494
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.3646
+Baseline Accuracy: 0.9723
+Baseline Recall: 0.0090
+Baseline F1: 0.0163
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.2832
+Baseline Accuracy: 0.9792
+Baseline Recall: 0.0020
+Baseline F1: 0.0040
+Ictal_12.csv
+Non-Ictal_12.csv
+Time used to read all data for patient 13: 1629.1761322021484 seconds
+Time used to concat the dataframe : 553.3316049575806 seconds
+Time used to split the data: 564.7556748390198
+Shape of X_test: (57081, 2560, 1)
+Shape of Y_test: (57081,)
+1784/1784 [==============================] - 91s 51ms/step
+1784/1784 [==============================] - 88s 49ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.1341
+Baseline F1: 0.0623
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0146
+Baseline F1: 0.0247
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.1283
+Baseline F1: 0.0691
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0087
+Baseline F1: 0.0157
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.1137
+Baseline F1: 0.0675
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0058
+Baseline F1: 0.0108
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.1050
+Baseline F1: 0.0672
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0058
+Baseline F1: 0.0110
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0962
+Baseline F1: 0.0661
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0029
+Baseline F1: 0.0056
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0904
+Baseline F1: 0.0656
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0904
+Baseline F1: 0.0683
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0904
+Baseline F1: 0.0713
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0875
+Baseline F1: 0.0724
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0845
+Baseline F1: 0.0734
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0816
+Baseline F1: 0.0749
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0816
+Baseline F1: 0.0789
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0816
+Baseline F1: 0.0836
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0758
+Baseline F1: 0.0825
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0700
+Baseline F1: 0.0809
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0671
+Baseline F1: 0.0841
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0612
+Baseline F1: 0.0847
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1768
+Baseline Accuracy: 0.9872
+Baseline Recall: 0.0496
+Baseline F1: 0.0759
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0831
+Baseline Accuracy: 0.9939
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_13.csv
+Non-Ictal_13.csv
+Time used to read all data for patient 14: 1050.9850006103516 seconds
+Time used to concat the dataframe : 458.5187246799469 seconds
+Time used to split the data: 426.2183029651642
+Shape of X_test: (52271, 2560, 1)
+Shape of Y_test: (52271,)
+1634/1634 [==============================] - 85s 52ms/step
+1634/1634 [==============================] - 86s 53ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0165
+Baseline F1: 0.0018
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0165
+Baseline F1: 0.0022
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0165
+Baseline F1: 0.0025
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0083
+Baseline F1: 0.0014
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0083
+Baseline F1: 0.0015
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0083
+Baseline F1: 0.0016
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0083
+Baseline F1: 0.0017
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0083
+Baseline F1: 0.0018
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1136
+Baseline Accuracy: 0.9812
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0334
+Baseline Accuracy: 0.9975
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_14.csv
+Non-Ictal_14.csv
+Time used to read all data for patient 15: 3631.941877603531 seconds
+Time used to concat the dataframe : 718.9956011772156 seconds
+Time used to split the data: 964.2433195114136
+Shape of X_test: (108670, 2560, 1)
+Shape of Y_test: (108670,)
+3396/3396 [==============================] - 173s 51ms/step
+3396/3396 [==============================] - 176s 52ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0250
+Baseline F1: 0.0426
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0206
+Baseline F1: 0.0363
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0150
+Baseline F1: 0.0268
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0131
+Baseline F1: 0.0236
+Rehearsal Performance with threshold 0.2:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0112
+Baseline F1: 0.0204
+Rehearsal Performance with threshold 0.25:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0094
+Baseline F1: 0.0171
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0094
+Baseline F1: 0.0173
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0075
+Baseline F1: 0.0139
+Rehearsal Performance with threshold 0.4:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0075
+Baseline F1: 0.0140
+Rehearsal Performance with threshold 0.45:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0063
+Baseline F1: 0.0117
+Rehearsal Performance with threshold 0.5:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0056
+Baseline F1: 0.0106
+Rehearsal Performance with threshold 0.55:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0044
+Baseline F1: 0.0082
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0044
+Baseline F1: 0.0083
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0037
+Baseline F1: 0.0071
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0031
+Baseline F1: 0.0060
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0013
+Baseline F1: 0.0024
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.3343
+Baseline Accuracy: 0.9844
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.2590
+Baseline Accuracy: 0.9853
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_15.csv
+Non-Ictal_15.csv
+Time used to read all data for patient 16: 466.29329919815063 seconds
+Time used to concat the dataframe : 206.97321796417236 seconds
+Time used to split the data: 368.0462749004364
+Shape of X_test: (37336, 2560, 1)
+Shape of Y_test: (37336,)
+1167/1167 [==============================] - 62s 53ms/step
+1167/1167 [==============================] - 57s 49ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0805
+Baseline Accuracy: 0.9908
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0305
+Baseline Accuracy: 0.9978
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_16.csv
+Non-Ictal_16.csv
+Time used to read all data for patient 17: 544.542760848999 seconds
+Time used to concat the dataframe : 40.38879418373108 seconds
+Time used to split the data: 381.5407783985138
+Shape of X_test: (41805, 2560, 1)
+Shape of Y_test: (41805,)
+1307/1307 [==============================] - 67s 51ms/step
+1307/1307 [==============================] - 66s 51ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0977
+Baseline F1: 0.1079
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0920
+Baseline F1: 0.1103
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0862
+Baseline F1: 0.1107
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0805
+Baseline F1: 0.1077
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0805
+Baseline F1: 0.1116
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0747
+Baseline F1: 0.1066
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0747
+Baseline F1: 0.1088
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0632
+Baseline F1: 0.0944
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0632
+Baseline F1: 0.0957
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0517
+Baseline F1: 0.0807
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0460
+Baseline F1: 0.0737
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0460
+Baseline F1: 0.0748
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0460
+Baseline F1: 0.0751
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0460
+Baseline F1: 0.0766
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0402
+Baseline F1: 0.0690
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0402
+Baseline F1: 0.0704
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0402
+Baseline F1: 0.0722
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1040
+Baseline Accuracy: 0.9951
+Baseline Recall: 0.0115
+Baseline F1: 0.0217
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0821
+Baseline Accuracy: 0.9958
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_17.csv
+Non-Ictal_17.csv
+Time used to read all data for patient 18: 2662.150349378586 seconds
+Time used to concat the dataframe : 795.6692099571228 seconds
+Time used to split the data: 1031.227196931839
+Shape of X_test: (71214, 2560, 1)
+Shape of Y_test: (71214,)
+2226/2226 [==============================] - 114s 51ms/step
+2226/2226 [==============================] - 110s 49ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0478
+Baseline F1: 0.0610
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0478
+Baseline F1: 0.0671
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0478
+Baseline F1: 0.0719
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0431
+Baseline F1: 0.0655
+Rehearsal Performance with threshold 0.2:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0431
+Baseline F1: 0.0677
+Rehearsal Performance with threshold 0.25:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0431
+Baseline F1: 0.0690
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0431
+Baseline F1: 0.0709
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0335
+Baseline F1: 0.0560
+Rehearsal Performance with threshold 0.4:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0287
+Baseline F1: 0.0488
+Rehearsal Performance with threshold 0.45:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0287
+Baseline F1: 0.0492
+Rehearsal Performance with threshold 0.5:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0239
+Baseline F1: 0.0415
+Rehearsal Performance with threshold 0.55:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0239
+Baseline F1: 0.0420
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0096
+Baseline F1: 0.0172
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0096
+Baseline F1: 0.0175
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0096
+Baseline F1: 0.0177
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0096
+Baseline F1: 0.0178
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0096
+Baseline F1: 0.0181
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0658
+Baseline Accuracy: 0.9967
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0413
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_18.csv
+Non-Ictal_18.csv
+Time used to read all data for patient 19: 1332.5199978351593 seconds
+Time used to concat the dataframe : 533.9736499786377 seconds
+Time used to split the data: 1049.679226398468
+Shape of X_test: (59747, 2560, 1)
+Shape of Y_test: (59747,)
+1868/1868 [==============================] - 94s 50ms/step
+1868/1868 [==============================] - 97s 52ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1620
+Baseline F1: 0.1447
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0211
+Baseline F1: 0.0414
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1620
+Baseline F1: 0.1620
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1408
+Baseline F1: 0.1527
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1408
+Baseline F1: 0.1613
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1338
+Baseline F1: 0.1638
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1197
+Baseline F1: 0.1525
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1197
+Baseline F1: 0.1553
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1127
+Baseline F1: 0.1509
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.1056
+Baseline F1: 0.1442
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0915
+Baseline F1: 0.1294
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0704
+Baseline F1: 0.1047
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0704
+Baseline F1: 0.1058
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0704
+Baseline F1: 0.1087
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0563
+Baseline F1: 0.0899
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0493
+Baseline F1: 0.0795
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0423
+Baseline F1: 0.0706
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0423
+Baseline F1: 0.0736
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0920
+Baseline Accuracy: 0.9971
+Baseline Recall: 0.0282
+Baseline F1: 0.0510
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0398
+Baseline Accuracy: 0.9976
+Baseline Recall: 0.0070
+Baseline F1: 0.0140
+Ictal_19.csv
+Non-Ictal_19.csv
+Time used to read all data for patient 20: 1278.5831084251404 seconds
+Time used to concat the dataframe : 433.0852725505829 seconds
+Time used to split the data: 659.163453578949
+Shape of X_test: (55496, 2560, 1)
+Shape of Y_test: (55496,)
+1735/1735 [==============================] - 89s 51ms/step
+1735/1735 [==============================] - 90s 52ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.1168
+Baseline F1: 0.0203
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.1066
+Baseline F1: 0.0228
+Rehearsal Performance with threshold 0.1:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0914
+Baseline F1: 0.0226
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0914
+Baseline F1: 0.0254
+Rehearsal Performance with threshold 0.2:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0914
+Baseline F1: 0.0283
+Rehearsal Performance with threshold 0.25:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0914
+Baseline F1: 0.0311
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0761
+Baseline F1: 0.0288
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0761
+Baseline F1: 0.0315
+Rehearsal Performance with threshold 0.4:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0761
+Baseline F1: 0.0342
+Rehearsal Performance with threshold 0.45:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0711
+Baseline F1: 0.0349
+Rehearsal Performance with threshold 0.5:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0660
+Baseline F1: 0.0351
+Rehearsal Performance with threshold 0.55:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0660
+Baseline F1: 0.0387
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0609
+Baseline F1: 0.0397
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0609
+Baseline F1: 0.0446
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0406
+Baseline F1: 0.0343
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0305
+Baseline F1: 0.0325
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0305
+Baseline F1: 0.0446
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1085
+Baseline Accuracy: 0.9861
+Baseline Recall: 0.0203
+Baseline F1: 0.0377
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0490
+Baseline Accuracy: 0.9965
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_20.csv
+Non-Ictal_20.csv
+Time used to read all data for patient 21: 2822.9233045578003 seconds
+Time used to concat the dataframe : 674.0240988731384 seconds
+Time used to split the data: 1021.5011727809906
+Shape of X_test: (66002, 2560, 1)
+Shape of Y_test: (66002,)
+2063/2063 [==============================] - 113s 55ms/step
+2063/2063 [==============================] - 107s 52ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0219
+Baseline F1: 0.0265
+Rehearsal Performance with threshold 0.05:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0200
+Rehearsal Performance with threshold 0.1:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0214
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0222
+Rehearsal Performance with threshold 0.2:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0227
+Rehearsal Performance with threshold 0.25:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0235
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0247
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0255
+Rehearsal Performance with threshold 0.4:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0255
+Rehearsal Performance with threshold 0.45:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0258
+Rehearsal Performance with threshold 0.5:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0261
+Rehearsal Performance with threshold 0.55:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0263
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0146
+Baseline F1: 0.0268
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0073
+Baseline F1: 0.0136
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0073
+Baseline F1: 0.0139
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0073
+Baseline F1: 0.0143
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0441
+Baseline Accuracy: 0.9977
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0291
+Baseline Accuracy: 0.9979
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_21.csv
+Non-Ictal_21.csv
+Time used to read all data for patient 22: 1667.1198103427887 seconds
+Time used to concat the dataframe : 581.9430043697357 seconds
+Time used to split the data: 698.1470446586609
+Shape of X_test: (62334, 2560, 1)
+Shape of Y_test: (62334,)
+1948/1948 [==============================] - 94s 48ms/step
+1948/1948 [==============================] - 99s 51ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2835
+Baseline F1: 0.1572
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0630
+Baseline F1: 0.1185
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2598
+Baseline F1: 0.1741
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0236
+Baseline F1: 0.0462
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2283
+Baseline F1: 0.1774
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0157
+Baseline F1: 0.0310
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2205
+Baseline F1: 0.1860
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2205
+Baseline F1: 0.1972
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2205
+Baseline F1: 0.2082
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.2047
+Baseline F1: 0.2047
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1969
+Baseline F1: 0.2101
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1969
+Baseline F1: 0.2155
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1890
+Baseline F1: 0.2172
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1890
+Baseline F1: 0.2275
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1575
+Baseline F1: 0.2030
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1496
+Baseline F1: 0.1990
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0079
+Baseline F1: 0.0156
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1417
+Baseline F1: 0.1978
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1417
+Baseline F1: 0.2045
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1339
+Baseline F1: 0.2138
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1181
+Baseline F1: 0.1974
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0586
+Baseline Accuracy: 0.9972
+Baseline Recall: 0.1181
+Baseline F1: 0.2055
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0278
+Baseline Accuracy: 0.9980
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_22.csv
+Non-Ictal_22.csv
+Time used to read all data for patient 23: 1024.4163763523102 seconds
+Time used to concat the dataframe : 244.88338327407837 seconds
+Time used to split the data: 543.3046379089355
+Shape of X_test: (43949, 2560, 1)
+Shape of Y_test: (43949,)
+1374/1374 [==============================] - 66s 48ms/step
+1374/1374 [==============================] - 65s 48ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.1323
+Baseline F1: 0.1426
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0039
+Baseline F1: 0.0075
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.1245
+Baseline F1: 0.1513
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0039
+Baseline F1: 0.0075
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.1089
+Baseline F1: 0.1400
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0039
+Baseline F1: 0.0077
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0973
+Baseline F1: 0.1316
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0895
+Baseline F1: 0.1250
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0856
+Baseline F1: 0.1229
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0778
+Baseline F1: 0.1159
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0778
+Baseline F1: 0.1180
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0700
+Baseline F1: 0.1081
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0661
+Baseline F1: 0.1059
+Rehearsal Performance with threshold 0.5:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0661
+Baseline F1: 0.1090
+Rehearsal Performance with threshold 0.55:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0661
+Baseline F1: 0.1097
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0661
+Baseline F1: 0.1104
+Rehearsal Performance with threshold 0.65:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0661
+Baseline F1: 0.1111
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0661
+Baseline F1: 0.1130
+Rehearsal Performance with threshold 0.75:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0545
+Baseline F1: 0.0952
+Rehearsal Performance with threshold 0.8:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0428
+Baseline F1: 0.0769
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1119
+Baseline Accuracy: 0.9935
+Baseline Recall: 0.0311
+Baseline F1: 0.0582
+Rehearsal Performance with threshold 0.9:
+=====================
+C:\Users\marcu\AppData\Roaming\Python\Python311\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Baseline Loss: 0.0783
+Baseline Accuracy: 0.9942
+Baseline Recall: 0.0000
+Baseline F1: 0.0000
+Ictal_23.csv
+Non-Ictal_23.csv
+Time used to read all data for patient 24: 518.7360961437225 seconds
+Time used to concat the dataframe : 150.4140796661377 seconds
+Time used to split the data: 289.0280079841614
+Shape of X_test: (35167, 2560, 1)
+Shape of Y_test: (35167,)
+1099/1099 [==============================] - 53s 48ms/step
+1099/1099 [==============================] - 53s 48ms/step
+Baseline Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4983
+Baseline F1: 0.4062
+Rehearsal Performance with threshold 0.05:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1993
+Baseline F1: 0.2929
+Baseline Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4845
+Baseline F1: 0.4332
+Rehearsal Performance with threshold 0.1:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1546
+Baseline F1: 0.2459
+Baseline Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4708
+Baseline F1: 0.4391
+Rehearsal Performance with threshold 0.15000000000000002:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1443
+Baseline F1: 0.2353
+Baseline Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4674
+Baseline F1: 0.4488
+Rehearsal Performance with threshold 0.2:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1443
+Baseline F1: 0.2373
+Baseline Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4674
+Baseline F1: 0.4541
+Rehearsal Performance with threshold 0.25:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1409
+Baseline F1: 0.2356
+Baseline Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4605
+Baseline F1: 0.4558
+Rehearsal Performance with threshold 0.30000000000000004:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1375
+Baseline F1: 0.2312
+Baseline Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4536
+Baseline F1: 0.4583
+Rehearsal Performance with threshold 0.35000000000000003:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1271
+Baseline F1: 0.2189
+Baseline Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4536
+Baseline F1: 0.4664
+Rehearsal Performance with threshold 0.4:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1271
+Baseline F1: 0.2202
+Baseline Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4536
+Baseline F1: 0.4723
+Rehearsal Performance with threshold 0.45:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.1134
+Baseline F1: 0.1988
+Baseline Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4502
+Baseline F1: 0.4764
+Rehearsal Performance with threshold 0.5:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0997
+Baseline F1: 0.1774
+Baseline Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4433
+Baseline F1: 0.4734
+Rehearsal Performance with threshold 0.55:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0893
+Baseline F1: 0.1605
+Baseline Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4261
+Baseline F1: 0.4662
+Rehearsal Performance with threshold 0.6000000000000001:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0722
+Baseline F1: 0.1317
+Baseline Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4227
+Baseline F1: 0.4686
+Rehearsal Performance with threshold 0.65:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0687
+Baseline F1: 0.1274
+Baseline Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4192
+Baseline F1: 0.4701
+Rehearsal Performance with threshold 0.7000000000000001:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0653
+Baseline F1: 0.1214
+Baseline Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4124
+Baseline F1: 0.4697
+Rehearsal Performance with threshold 0.75:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0584
+Baseline F1: 0.1093
+Baseline Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.4089
+Baseline F1: 0.4789
+Rehearsal Performance with threshold 0.8:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0481
+Baseline F1: 0.0915
+Baseline Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.3883
+Baseline F1: 0.4699
+Rehearsal Performance with threshold 0.8500000000000001:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0378
+Baseline F1: 0.0726
+Baseline Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.1104
+Baseline Accuracy: 0.9918
+Baseline Recall: 0.3540
+Baseline F1: 0.4598
+Rehearsal Performance with threshold 0.9:
+=====================
+Baseline Loss: 0.0735
+Baseline Accuracy: 0.9924
+Baseline Recall: 0.0172
+Baseline F1: 0.0337
